@@ -1,0 +1,215 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-09-25T00:05:57.173Z",
+        "line": 2,
+        "name": "Login Page",
+        "description": "",
+        "id": "spring-1-goya-project-senario;login-page",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 17256000000,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "I am on the Login page",
+            "match": {
+              "location": "com.SB3.goya.stepdefs.LoginStepDefination.i_am_on_the_Login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3044000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I should see Sign In Page",
+            "match": {
+              "location": "com.SB3.goya.stepdefs.LoginStepDefination.i_should_see_Sign_In_Page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 9832000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I enter username",
+            "match": {
+              "location": "com.SB3.goya.stepdefs.LoginStepDefination.i_enter_username()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3170000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I enter password",
+            "match": {
+              "location": "com.SB3.goya.stepdefs.LoginStepDefination.i_enter_password()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8220000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user clicks on login button",
+            "match": {
+              "location": "com.SB3.goya.stepdefs.LoginStepDefination.user_clicks_on_login_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3019000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user is logged in",
+            "match": {
+              "location": "com.SB3.goya.stepdefs.LoginStepDefination.user_is_logged_in()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-09-25T00:06:41.971Z",
+        "line": 10,
+        "name": "Dashboard",
+        "description": "",
+        "id": "spring-1-goya-project-senario;dashboard",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6073000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user is home page",
+            "match": {
+              "location": "com.SB3.goya.stepdefs.LoginStepDefination.user_is_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 10224000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I should customers tab click",
+            "match": {
+              "location": "com.SB3.goya.stepdefs.LoginStepDefination.i_should_customers_tab_click()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3092000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "customers Page verify",
+            "match": {
+              "location": "com.SB3.goya.stepdefs.LoginStepDefination.customers_Page_verify()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3353000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "given input search customer textbox",
+            "match": {
+              "location": "com.SB3.goya.stepdefs.LoginStepDefination.given_input_search_customer_textbox()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10186000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "chose customer",
+            "match": {
+              "location": "com.SB3.goya.stepdefs.LoginStepDefination.chose_customer()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10242000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "select button click",
+            "match": {
+              "location": "com.SB3.goya.stepdefs.LoginStepDefination.select_button_click()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10321000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "then process button click",
+            "match": {
+              "location": "com.SB3.goya.stepdefs.LoginStepDefination.then_process_button_click()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6079000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "you have enter home page verify",
+            "match": {
+              "location": "com.SB3.goya.stepdefs.LoginStepDefination.you_have_enter_home_page_verify()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3925000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "header file change name verify",
+            "match": {
+              "location": "com.SB3.goya.stepdefs.LoginStepDefination.header_file_change_name_verify()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Spring 1 goya project senario",
+    "description": "",
+    "id": "spring-1-goya-project-senario",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/login.feature",
+    "tags": []
+  }
+]

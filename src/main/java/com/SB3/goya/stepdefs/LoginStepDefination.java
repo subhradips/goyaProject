@@ -93,6 +93,7 @@ public class LoginStepDefination extends GoyaBase {
 		dashBoardXpath.enterValue(dashBoardXpath.Search_Customer,prop.getPropValues(GoyaConstants.Search_customer));
 		driver.manage().timeouts().implicitlyWait(240, TimeUnit.SECONDS);
 		Thread.sleep(3000);
+		System.out.println("given input search customer textbox: "+GoyaConstants.Search_customer);
 	}
 
 	@Then("^chose customer$")
@@ -101,6 +102,7 @@ public class LoginStepDefination extends GoyaBase {
 		dashBoardXpath.clickOn(dashBoardXpath.RadioButton);
 		driver.manage().timeouts().implicitlyWait(240, TimeUnit.SECONDS);
 		Thread.sleep(3000);
+		System.out.println("Radio Button Click: "+ "Press Radio Button");
 
 	}
 	@Then("^select button click$")
@@ -133,11 +135,12 @@ public class LoginStepDefination extends GoyaBase {
 		dashBoardXpath.clickOn(dashBoardXpath.process);
 		driver.manage().timeouts().implicitlyWait(240, TimeUnit.SECONDS);
 		Thread.sleep(3000);
+		System.out.println("process button click: "+ "press the button");
 	}
 	@Then("^you have enter home page verify$")
 	public void you_have_enter_home_page_verify() throws Throwable  {
 		// Write code here that turns the phrase above into concrete actions
-		user_is_logged_in();
+		this.user_is_logged_in();
 		driver.manage().timeouts().implicitlyWait(240, TimeUnit.SECONDS);
 		Thread.sleep(3000);
 	}
@@ -148,7 +151,9 @@ public class LoginStepDefination extends GoyaBase {
 		String expectedFinalMessage = prop.getPropValues(GoyaConstants.Pop_Up_Massage);
 		String acctualFinalMessage = dashBoardXpath.HeaderTitle.getText();
 		assertEquals(expectedFinalMessage,acctualFinalMessage);
+		System.out.println("header file change name : "+acctualFinalMessage);
 		Thread.sleep(3000);
+		driver.quit();
 	}
 
 }

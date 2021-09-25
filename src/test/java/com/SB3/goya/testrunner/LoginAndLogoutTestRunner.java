@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = "./src/test/resources/features/login.feature",
         glue = "com/SB3/goya/stepdefs",
         monochrome = true,
-        plugin = {"pretty", "html:target/cucumber-reports/cucumber-pretty","json:target/cucumber-reports/CucumberTestReport.json", "rerun:target/cucumber-reports/rerun.txt" })
+        plugin = {"pretty", "html:target/cucumber-reports/goya.html","json:target/cucumber-reports/goya.json", "junit:target/cucumber-reports/goya.xml" })
 
 public class LoginAndLogoutTestRunner {
 }
