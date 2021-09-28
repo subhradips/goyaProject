@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="108.92">
-<testcase classname="Spring 1 goya project senario" name="Login Page" time="44.769">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="72.423">
+<testcase classname="Spring 1 goya project senario" name="Login Page" time="37.513">
 <system-out><![CDATA[Given I am on the Login page................................................passed
 When I should see Sign In Page..............................................passed
 Then I enter username.......................................................passed
@@ -9,7 +9,7 @@ Then user clicks on login button............................................pass
 And user is logged in.......................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Spring 1 goya project senario" name="Dashboard" time="63.516">
+<testcase classname="Spring 1 goya project senario" name="Dashboard" time="34.65">
 <system-out><![CDATA[Given user is home page.....................................................passed
 When I should customers tab click...........................................passed
 Then customers Page verify..................................................passed

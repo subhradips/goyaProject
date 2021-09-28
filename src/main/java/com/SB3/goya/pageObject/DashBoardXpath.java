@@ -13,13 +13,14 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class DashBoardXpath extends UserHomePage{
+public class DashBoardXpath extends UserHomePage {
     public DashBoardXpath(WebDriver driver) {
         this.driver = driver;
         this.actions = new Actions(driver);
         PageFactory.initElements(driver, this);
         waitHelper = new WaitHelper(driver);
     }
+
     public static final String invoicePattern = "[A-Z]{1}[0-9]{5,}";
     public static final String giPattern = "[GI]{2}[0-9]{5,}";
 
@@ -27,13 +28,16 @@ public class DashBoardXpath extends UserHomePage{
     @FindBy(how = How.XPATH, using = "//*[@id=\"profile-mob\"]/ul/li/div/button")
     public WebElement CARLOS_MORATO;
 
-    @FindBy(how = How.XPATH,using = "//p[contains(text(),'Customers')]")
+    @FindBy(how = How.XPATH, using = "//p[contains(text(),'Customers')]")
     public WebElement Customers_Page;
 
-    @FindBy(how = How.XPATH,using = "//body/div[1]/div[4]/div[1]/section[1]/div[2]/div[1]")
+    //    @FindBy(how = How.XPATH,using = "//body/div[1]/div[4]/div[1]/section[1]/div[2]/div[1]")
+//    public WebElement HeaderTitle;
+    @FindBy(how = How.XPATH, using = "//body/div[1]/div[4]/div[1]/section[1]/div[2]/div[1]")
     public WebElement HeaderTitle;
 
-    @FindBy(how = How.XPATH,using = "//div[@class='modal-body ftr-align']//b[contains(text(),'712450-SHOP RITE 130')]")
+
+    @FindBy(how = How.XPATH, using = "//div[@class='modal-body ftr-align']//b[contains(text(),'712450-SHOP RITE 130')]")
     public static WebElement invoiceData;
 
     @FindBy(how = How.XPATH, using = "//div[@class='form-group']//input[@type='text']")
@@ -62,6 +66,10 @@ public class DashBoardXpath extends UserHomePage{
 
     @FindBy(how = How.XPATH, using = "//button[contains(text(),'Proceed')]")
     public WebElement process;
+
+    @FindBy(how = How.XPATH, using = "//*[@id='hide-for-print']/div[2]/div[2]/div/div[2]/h4/b")
+    public WebElement CustomerinvoicesuccessMessageElement;
+
 
     public void enterValue(WebElement element, String value) {
         element.sendKeys(value);
@@ -109,6 +117,7 @@ public class DashBoardXpath extends UserHomePage{
         }
         return output;
     }
+
 
 
 }
