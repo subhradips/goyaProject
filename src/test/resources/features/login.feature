@@ -6,14 +6,28 @@ Feature: Spring 1 goya project senario
     Then  I enter password
     Then  user clicks on login button
     And   user is logged in
+#
+#  Scenario: Dashboard
+#    Given user is home page
+#    When I should customers tab click
+#    Then customers Page verify
+#    Then given input search customer textbox
+#    Then chose customer
+#    Then select button click
+#    Then then process button click
+#    Then you have enter home page verify
+#    Then header file change name verify
 
-  Scenario: Dashboard
+  Scenario: Order
     Given user is home page
-    When I should customers tab click
-    Then customers Page verify
-    Then given input search customer textbox
-    Then chose customer
-    Then select button click
-    Then then process button click
-    Then you have enter home page verify
-    Then header file change name verify
+    When I should Order tab click
+    Then Order Page verify
+    Then Customer dropdown select Customer
+    Then Search Item Button click
+    Then Search Items value in the textBox
+    Then Click Add to Cart Button
+#    Then Enter Quality amount
+#    Then pop_up Add to Cart Button Click
+#    Then Continue Button Click
+#    Then Store EQR Data
+#    Then Submit button click

@@ -69,6 +69,19 @@ public class DashBoardXpath extends UserHomePage {
 
     @FindBy(how = How.XPATH, using = "//*[@id='hide-for-print']/div[2]/div[2]/div/div[2]/h4/b")
     public WebElement CustomerinvoicesuccessMessageElement;
+    @FindBy(how = How.XPATH, using = "//*[@id='idd']/div/div[4]/div[1]/section/div[3]/ul/li[7]/div/a/input")
+    public WebElement Order;
+    @FindBy(how = How.XPATH, using = "//a[@title='Search items list']")
+    public WebElement Search_Iteam;
+    @FindBy(how = How.XPATH, using = "//*[@id='qk-remove-space']/form/div/ul/li[2]/div/div")
+    public WebElement Customer_Dropdown;
+    @FindBy(how = How.XPATH, using = "//*[@id='qk-remove-space']/form/div/ul/li[2]/div/div/div[2]/div/div/div[5]/div")
+    public List<WebElement>  Customer_Dropdown_Value;
+    @FindBy(how = How.XPATH, using = "//body/div[1]/div[4]/div[1]/div[3]/div[1]/div[1]/div[2]/p[2]/input[1]")
+    public WebElement Search_Iteam_textBox;
+    @FindBy(how = How.XPATH, using = "//body/div[1]/div[4]/div[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[5]/button[1]")
+    public WebElement Add_To_Cart;
+
 
 
     public void enterValue(WebElement element, String value) {

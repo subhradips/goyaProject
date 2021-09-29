@@ -7,6 +7,8 @@ public class GoyaConstants {
     public static final String password = "goya.password";
     public static final String Search_customer ="goya.search_customer";
     public static final String Pop_Up_Massage = "goya.popup";
+    public static final String dropdownValue="goya.dropdownValue";
+    public static final String SearchItemsValue = "goya.SearchItemsValue";
 
     public final static long explicitWait = 100;
     public final static long impliciteWait = 100;
