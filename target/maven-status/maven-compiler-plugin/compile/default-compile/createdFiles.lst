@@ -1,0 +1,11 @@
+com\SB3\goya\stepdefs\LoginStepDefination.class
+com\SB3\goya\pageObject\removeSpaces.class
+com\SB3\goya\GoyaConstants.class
+com\SB3\goya\GoyaGetPropertyValues.class
+com\SB3\goya\pageObject\mainPage.class
+com\SB3\goya\pageObject\Screenshot_File.class
+com\SB3\goya\GoyaBase.class
+com\SB3\goya\pageObject\DashBoardXpath.class
+com\SB3\goya\pageObject\UserHomePage.class
+com\SB3\goya\pageObject\Xls_Reader.class
+com\SB3\goya\helpers\WaitHelper.class
