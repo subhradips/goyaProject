@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="207.038">
-<testcase classname="Spring 1 goya project senario" name="Login Page" time="50.689">
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="351.097">
+<testcase classname="Spring 1 goya project senario" name="Login Page" time="22.635">
 <system-out><![CDATA[Given I am on the Login page................................................passed
 When I should see Sign In Page..............................................passed
 Then I enter username.......................................................passed
@@ -8,8 +8,49 @@ Then I enter password.......................................................pass
 Then user clicks on login button............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Spring 1 goya project senario" name="Order Status" time="155.843">
-<failure message="Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on XP (209b816cb6858790e49ca79570a7bb02)] -&gt; xpath: //button[contains(text(),'Confirm Merge Order')]] (tried for 30 second(s) with 500 milliseconds interval)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'SB3TS-02', ip: '192.168.255.86', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\SUBHRA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 94.0.4606.71, webStorageEnabled: true}&#10;Session ID: 209b816cb6858790e49ca79570a7bb02" type="org.openqa.selenium.TimeoutException"><![CDATA[Given user is home page.....................................................passed
+<testcase classname="Spring 1 goya project senario" name="Customer" time="42.659">
+<system-out><![CDATA[Given user is home page.....................................................passed
+When I should customers tab click...........................................passed
+Then customers Page verify..................................................passed
+Then given input search customer textbox....................................passed
+Then chose customer.........................................................passed
+Then select button click....................................................passed
+Then then process button click..............................................passed
+Then you have enter home page verify........................................passed
+Then header file change name verify.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Spring 1 goya project senario" name="Order" time="130.409">
+<failure message="Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on XP (211f4e8669b020188d5a9eebe57d69e1)] -&gt; xpath: //button[contains(text(),'Confirm Merge Order')]] (tried for 30 second(s) with 500 milliseconds interval)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'SB3TS-02', ip: '192.168.255.86', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\SUBHRA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 94.0.4606.71, webStorageEnabled: true}&#10;Session ID: 211f4e8669b020188d5a9eebe57d69e1" type="org.openqa.selenium.TimeoutException"><![CDATA[Given user is home page.....................................................passed
+When I should Order tab click...............................................passed
+Then Order Page verify......................................................passed
+Then Customer dropdown select Customer......................................passed
+Then Search Item Button click...............................................passed
+Then Search Items value in the textBox......................................passed
+Then Click Add to Cart Button...............................................passed
+Then Enter Quality amount...................................................passed
+Then pop_up Add to Cart Button Click........................................passed
+Then Continue Button Click..................................................passed
+Then Store EOR Data.........................................................passed
+Then Submit button click....................................................failed
+
+StackTrace:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on XP (211f4e8669b020188d5a9eebe57d69e1)] -> xpath: //button[contains(text(),'Confirm Merge Order')]] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SB3TS-02', ip: '192.168.255.86', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\SUBHRA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 94.0.4606.71, webStorageEnabled: true}
+Session ID: 211f4e8669b020188d5a9eebe57d69e1
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.SB3.goya.helpers.waitHelper.WaitForElementToClick(waitHelper.java:24)
+	at com.SB3.goya.pageObject.dashBoardXpath.clickOnAfterElementIsVisible(DashBoardXpath.java:143)
+	at com.SB3.goya.stepdefs.loginStepDefination.submit_button_click(loginStepDefination.java:290)
+	at ✽.Submit button click(file:///D:/Automation/goyaProject/./src/test/resources/features/login.feature:32)
+]]></failure>
+</testcase>
+<testcase classname="Spring 1 goya project senario" name="Order Status" time="154.664">
+<failure message="Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on XP (211f4e8669b020188d5a9eebe57d69e1)] -&gt; xpath: //button[contains(text(),'Confirm Merge Order')]] (tried for 30 second(s) with 500 milliseconds interval)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'SB3TS-02', ip: '192.168.255.86', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\SUBHRA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 94.0.4606.71, webStorageEnabled: true}&#10;Session ID: 211f4e8669b020188d5a9eebe57d69e1" type="org.openqa.selenium.TimeoutException"><![CDATA[Given user is home page.....................................................passed
 When I should Order Status tab click........................................passed
 Then Customer Order Status dropdown select Customer.........................passed
 Then Search EOR number......................................................passed
@@ -24,17 +65,17 @@ Then Store EOR Data.........................................................pass
 Then Submit button click....................................................failed
 
 StackTrace:
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on XP (209b816cb6858790e49ca79570a7bb02)] -> xpath: //button[contains(text(),'Confirm Merge Order')]] (tried for 30 second(s) with 500 milliseconds interval)
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on XP (211f4e8669b020188d5a9eebe57d69e1)] -> xpath: //button[contains(text(),'Confirm Merge Order')]] (tried for 30 second(s) with 500 milliseconds interval)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'SB3TS-02', ip: '192.168.255.86', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\SUBHRA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 94.0.4606.71, webStorageEnabled: true}
-Session ID: 209b816cb6858790e49ca79570a7bb02
+Session ID: 211f4e8669b020188d5a9eebe57d69e1
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at com.SB3.goya.helpers.WaitHelper.WaitForElementToClick(WaitHelper.java:24)
-	at com.SB3.goya.pageObject.DashBoardXpath.clickOnAfterElementIsVisible(DashBoardXpath.java:143)
-	at com.SB3.goya.stepdefs.LoginStepDefination.submit_button_click(LoginStepDefination.java:310)
+	at com.SB3.goya.helpers.waitHelper.WaitForElementToClick(waitHelper.java:24)
+	at com.SB3.goya.pageObject.dashBoardXpath.clickOnAfterElementIsVisible(DashBoardXpath.java:143)
+	at com.SB3.goya.stepdefs.loginStepDefination.submit_button_click(loginStepDefination.java:290)
 	at ✽.Submit button click(file:///D:/Automation/goyaProject/./src/test/resources/features/login.feature:48)
 ]]></failure>
 </testcase>

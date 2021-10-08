@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class GoyaGetPropertyValues {
+public class goyaGetPropertyValues {
 
     String result = "";
     InputStream inputStream;

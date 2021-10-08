@@ -6,11 +6,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-public class WaitHelper {
+public class waitHelper {
 	
 	private WebDriver driver;
 	
-	public WaitHelper(WebDriver driver){
+	public waitHelper(WebDriver driver){
 		this.driver = driver;
 	}
 	

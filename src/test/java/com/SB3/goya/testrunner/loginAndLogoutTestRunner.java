@@ -10,5 +10,5 @@ import org.junit.runner.RunWith;
         monochrome = true,
         plugin = {"pretty", "html:target/cucumber-reports/goya.html","json:target/cucumber-reports/goya.json", "junit:target/cucumber-reports/goya.xml" })
 
-public class LoginAndLogoutTestRunner {
+public class loginAndLogoutTestRunner {
 }

@@ -6,11 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class mainPage {
+public class driverStorage {
     private WebDriver driver;
 
 
-    public mainPage(WebDriver driver) {
+    public driverStorage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
 

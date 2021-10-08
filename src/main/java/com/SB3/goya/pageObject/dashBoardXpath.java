@@ -1,6 +1,6 @@
 package com.SB3.goya.pageObject;
 
-import com.SB3.goya.helpers.WaitHelper;
+import com.SB3.goya.helpers.waitHelper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -13,12 +13,12 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class DashBoardXpath extends UserHomePage {
-    public DashBoardXpath(WebDriver driver) {
+public class dashBoardXpath extends userHomePage {
+    public dashBoardXpath(WebDriver driver) {
         this.driver = driver;
         this.actions = new Actions(driver);
         PageFactory.initElements(driver, this);
-        waitHelper = new WaitHelper(driver);
+        waitHelper = new waitHelper(driver);
     }
 
     public static final String invoicePattern = "[A-Z]{1}[0-9]{5,}";

@@ -7,7 +7,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.Calendar;
 
-public class Xls_Reader {
+public class xls_Reader {
     public String path;
     public FileInputStream fis = null;
     public FileOutputStream fileOut = null;
@@ -16,7 +16,7 @@ public class Xls_Reader {
     private XSSFRow row = null;
     private XSSFCell cell = null;
 
-    public Xls_Reader(String path) {
+    public xls_Reader(String path) {
 
         this.path = path;
         try {

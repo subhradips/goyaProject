@@ -4,10 +4,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class GoyaBase {
+public class goyaBase {
 
     public  static WebDriver driver;
-    public  static GoyaGetPropertyValues prop = new GoyaGetPropertyValues();
+    public  static goyaGetPropertyValues prop = new goyaGetPropertyValues();
 
     static {
         //System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/driver/geckodriver.exe");

@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 
 import java.io.File;
 
-public class Screenshot_File {
+public class screenshot_File {
     public static void goya(WebDriver driver, String screenshotName)
     {
         try {

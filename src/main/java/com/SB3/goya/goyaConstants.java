@@ -1,6 +1,6 @@
 package com.SB3.goya;
 
-public class GoyaConstants {
+public class goyaConstants {
 
     public static final String URL ="goya.url";
     public static final String username ="goya.username";

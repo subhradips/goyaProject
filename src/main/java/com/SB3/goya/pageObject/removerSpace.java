@@ -1,6 +1,6 @@
 package com.SB3.goya.pageObject;
 
-public class removeSpaces {
+public class removerSpace {
     public static int removeSpaces(char[] str)
     {
         // To keep track of non-space character count

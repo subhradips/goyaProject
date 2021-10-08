@@ -1,55 +1,33 @@
 package com.SB3.goya.stepdefs;
 
-import com.SB3.goya.GoyaBase;
-import com.SB3.goya.GoyaConstants;
-import com.SB3.goya.pageObject.DashBoardXpath;
-import com.SB3.goya.pageObject.Screenshot_File;
-import com.SB3.goya.pageObject.Xls_Reader;
-import com.SB3.goya.pageObject.mainPage;
-import io.cucumber.java.an.E;
+import com.SB3.goya.goyaBase;
+import com.SB3.goya.goyaConstants;
+import com.SB3.goya.pageObject.dashBoardXpath;
+import com.SB3.goya.pageObject.xls_Reader;
+import com.SB3.goya.pageObject.driverStorage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import jdk.internal.org.objectweb.asm.tree.analysis.Value;
-import net.sourceforge.tess4j.ITesseract;
-import net.sourceforge.tess4j.Tesseract;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.junit.Assert;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.io.FileHandler;
-import org.openqa.selenium.support.ui.Select;
 
-import javax.naming.ldap.Control;
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.beans.PropertyChangeListener;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.math.BigInteger;
-import java.nio.charset.StandardCharsets;
 import java.util.List;
-import java.util.Scanner;
+
 import java.util.concurrent.TimeUnit;
 
-import static com.SB3.goya.pageObject.removeSpaces.removeSpaces;
+import static com.SB3.goya.pageObject.removerSpace.removeSpaces;
 import static java.lang.String.valueOf;
 import static org.junit.Assert.assertEquals;
 
-public class LoginStepDefination extends GoyaBase {
+public class loginStepDefination extends goyaBase {
 
-	DashBoardXpath dashBoardXpath = new DashBoardXpath(driver);
-	Xls_Reader reader = new Xls_Reader("D:\\Automation\\goyaProject\\src\\test\\resources\\Data.xlsx");
-	mainPage mainPage_xpath = new mainPage(driver);
+	com.SB3.goya.pageObject.dashBoardXpath dashBoardXpath = new dashBoardXpath(driver);
+	xls_Reader reader = new xls_Reader("D:\\Automation\\goyaProject\\src\\test\\resources\\Data.xlsx");
+	driverStorage driverStorage_xpath = new driverStorage(driver);
 	String CustomerInvoiceMessage = new String();
 
 	@Given("^I am on the Login page$")
 	public void i_am_on_the_Login_page() throws Throwable {
-		driver.get(prop.getPropValues(GoyaConstants.URL));
+		driver.get(prop.getPropValues(goyaConstants.URL));
 		//waitHelper = new WaitHelper(driver);
 		Thread.sleep(1000);
 	}
@@ -66,21 +44,21 @@ public class LoginStepDefination extends GoyaBase {
 
 	@Then("^I enter username$")
 	public void i_enter_username() throws Throwable {
-		mainPage_xpath.enterValue(mainPage_xpath.username, prop.getPropValues(GoyaConstants.username));
+		driverStorage_xpath.enterValue(driverStorage_xpath.username, prop.getPropValues(goyaConstants.username));
 		Thread.sleep(1000);
 
 	}
 
 	@Then("^I enter password$")
 	public void i_enter_password() throws Throwable {
-		mainPage_xpath.enterValue(mainPage_xpath.password, prop.getPropValues(GoyaConstants.password));
+		driverStorage_xpath.enterValue(driverStorage_xpath.password, prop.getPropValues(goyaConstants.password));
 		Thread.sleep(1000);
 
 	}
 
 	@Then("^user clicks on login button$")
 	public void user_clicks_on_login_button() throws Throwable {
-		mainPage_xpath.clickOn(mainPage_xpath.submitButton);
+		driverStorage_xpath.clickOn(driverStorage_xpath.submitButton);
 		Thread.sleep(2000);
 	}
 
@@ -210,7 +188,7 @@ public class LoginStepDefination extends GoyaBase {
 		//Select customer_DropDown = new Select(dashBoardXpath.Customer_Dropdown);
 		dashBoardXpath.moveToElementAndCLikOn(dashBoardXpath.Customer_Dropdown);
 		Thread.sleep(4000);
-		dashBoardXpath.iterateWebElementListAndSelectValue(dashBoardXpath.Customer_Dropdown_Value, prop.getPropValues(GoyaConstants.dropdownValue));
+		dashBoardXpath.iterateWebElementListAndSelectValue(dashBoardXpath.Customer_Dropdown_Value, prop.getPropValues(goyaConstants.dropdownValue));
 		Thread.sleep(7000);
 	}
 
@@ -222,7 +200,9 @@ public class LoginStepDefination extends GoyaBase {
 
 	@Then("Search Items value in the textBox")
 	public void search_items_value_in_the_text_box() throws Exception {
-		dashBoardXpath.enterValue(dashBoardXpath.Search_Iteam_textBox, prop.getPropValues(GoyaConstants.SearchItemsValue));
+		dashBoardXpath.Search_Iteam_textBox.clear();
+		Thread.sleep(5000);
+		dashBoardXpath.enterValue(dashBoardXpath.Search_Iteam_textBox, prop.getPropValues(goyaConstants.SearchItemsValue));
 		Thread.sleep(5000);
 	}
 
@@ -235,19 +215,19 @@ public class LoginStepDefination extends GoyaBase {
 	@Then("Enter Quality amount")
 	public void enter_quality_amount() throws Exception {
 		dashBoardXpath.clickOn(dashBoardXpath.Add_Product);
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 	}
 
 	@Then("pop_up Add to Cart Button Click")
 	public void pop_up_add_to_cart_button_click() throws Exception {
 		dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Pop_up_Add_To_Cart);
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 	}
 
 	@Then("Continue Button Click")
 	public void continue_button_click() throws Exception {
 		dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Continue);
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 	}
 
 	@Then("Store EOR Data")
@@ -255,15 +235,15 @@ public class LoginStepDefination extends GoyaBase {
 		String s = ((JavascriptExecutor) driver).executeScript("return document.getElementById('eor').value").toString();
 		System.out.println("EOR Invoice Number is: "+s);
 		reader.setCellData("goya", "InvoiceNumber", 2, s);
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 	}
 
 	@Then("Submit button click")
 	public void submit_button_click() throws Exception {
 		dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Submit);
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		dashBoardXpath.clickOn(dashBoardXpath.Continue_Merge);
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 
 		WebElement popup1 = dashBoardXpath.Continue_Merge2;
 		if (popup1.isDisplayed()) {
@@ -336,7 +316,7 @@ public class LoginStepDefination extends GoyaBase {
 
 		dashBoardXpath.moveToElementAndCLikOn(dashBoardXpath.Customer_Oder_Status_Dropdown);
 		Thread.sleep(4000);
-		dashBoardXpath.iterateWebElementListAndSelectValue(dashBoardXpath.Customer_Oder_Status_Dropdown_Value, prop.getPropValues(GoyaConstants.dropdownValue));
+		dashBoardXpath.iterateWebElementListAndSelectValue(dashBoardXpath.Customer_Oder_Status_Dropdown_Value, prop.getPropValues(goyaConstants.dropdownValue));
 		Thread.sleep(7000);
 
 	}
@@ -345,12 +325,12 @@ public class LoginStepDefination extends GoyaBase {
 		WebElement EOR_SearchBox = dashBoardXpath.Oder_Status_EOR;
 		EOR_SearchBox.click();
 		dashBoardXpath.enterValue(EOR_SearchBox,reader.getCellData("goya","InvoiceNumber",2));
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 	}
 	@Then("Product Edit")
 	public void product_edit()throws Exception {
 		dashBoardXpath.clickOn(dashBoardXpath.Order_Status_edit);
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 
 	}
 }
