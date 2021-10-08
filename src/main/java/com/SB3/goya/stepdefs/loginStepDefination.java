@@ -9,6 +9,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.*;
+import sun.util.resources.cldr.rof.CalendarData_rof_TZ;
 
 import java.util.List;
 
@@ -24,6 +25,7 @@ public class loginStepDefination extends goyaBase {
 	xls_Reader reader = new xls_Reader("D:\\Automation\\goyaProject\\src\\test\\resources\\Data.xlsx");
 	driverStorage driverStorage_xpath = new driverStorage(driver);
 	String CustomerInvoiceMessage = new String();
+
 
 	@Given("^I am on the Login page$")
 	public void i_am_on_the_Login_page() throws Throwable {
@@ -242,12 +244,18 @@ public class loginStepDefination extends goyaBase {
 	public void submit_button_click() throws Exception {
 		dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Submit);
 		Thread.sleep(5000);
-		dashBoardXpath.clickOn(dashBoardXpath.Continue_Merge);
-		Thread.sleep(5000);
-
 		WebElement popup1 = dashBoardXpath.Continue_Merge2;
-		if (popup1.isDisplayed()) {
-			Thread.sleep(5000);
+		WebElement Submit1 = dashBoardXpath.Submit1;
+		if(Submit1.isDisplayed()){
+			dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Submit1);
+			System.out.println("******** Click Submit button: ***********"+Submit1.isDisplayed());
+			Alert abc = driver.switchTo().alert();
+			System.out.println("********Alert massage read:*******"+abc.getText());
+			reader.setCellData("goya","Successful Order place Message",2,abc.getText());
+			abc.accept();
+		}
+		else {
+			dashBoardXpath.clickOn(dashBoardXpath.Continue_Merge);
 			String EOR = reader.getCellData("goya", "InvoiceNumber", 2);
 			List<WebElement> dynamicElement = driver.findElements(By.xpath("//body/div[1]/div[4]/div[9]/div[2]/div[1]/div[2]"));
 			if (dynamicElement.size() > 0) {
@@ -261,42 +269,72 @@ public class loginStepDefination extends goyaBase {
 						dashBoardXpath.clickOnAfterElementIsVisible(MergeOrder);
 						System.out.println("Click Checkbox: " + MergeOrder.isDisplayed());
 						Thread.sleep(4000);
-					}
-					popup1.click();
-					System.out.println("Display MergeOrder Button and click:  " + popup1.isDisplayed());
-					Thread.sleep(4000);
-					WebElement Confirm_MergeOrder = dashBoardXpath.Confirm_Marge_order;
-					if (Confirm_MergeOrder.isDisplayed()) {
-						dashBoardXpath.clickOnAfterElementIsVisible(Confirm_MergeOrder);
-						System.out.println("Confirm_Marge_order Click:  " + Confirm_MergeOrder.isDisplayed());
+						popup1.click();
+						System.out.println("Display MergeOrder Button and click:  " + popup1.isDisplayed());
 						Thread.sleep(4000);
-						try {
-							Alert alert = driver.switchTo().alert();
-							alert.accept();
-							System.out.println(" **** All selected order has been merged.********  " + alert.getText());
-							Thread.sleep(4000);
-						} catch (Exception e) {
+						WebElement Confirm_MergeOrder = dashBoardXpath.Confirm_Marge_order;
+						if (Confirm_MergeOrder.isDisplayed()) {
 							dashBoardXpath.clickOnAfterElementIsVisible(Confirm_MergeOrder);
-							System.out.println("===================PopUp not showing=====================");
-							Thread.sleep(4000);
+							System.out.println("Confirm_Marge_order Click:  " + Confirm_MergeOrder.isDisplayed());
+							Thread.sleep(7000);
 						}
 					}
 					try {
-						Alert alert1 = driver.switchTo().alert();
-						alert1.accept();
-						System.out.println(" ******Please remove Restricted items.********Please remove Restricted items.*******  " + alert1.getText());
-						Thread.sleep(4000);
+						Alert alert = driver.switchTo().alert();
+						System.out.println(" **** All selected order has been merged.********  " + alert.getText());
+						Thread.sleep(3000);
+						alert.accept();
+
 					} catch (Exception e) {
-						dashBoardXpath.clickOnAfterElementIsVisible(Confirm_MergeOrder);
-						System.out.println("===================restriction PopUp not showing=====================");
+						System.out.println("===================PopUp not showing=====================");
 						Thread.sleep(4000);
+						e.printStackTrace();
+
+
 					}
 				}
 
-			}
-		}
 
-	}
+//							Alert alert = driver.switchTo().alert();
+//							if(alert.equals(alert)) {
+//								alert.accept();
+//								System.out.println(" **** All selected order has been merged.********  " + alert.getText());
+//								Thread.sleep(4000);
+//							} else {
+//								System.out.println("===================PopUp not showing====================="+alert.getText());
+//								Thread.sleep(4000);
+//							}
+//						}
+						Alert alert1 = driver.switchTo().alert();
+						if (alert1.equals(alert1)){
+							System.out.println(" ************ Restriction Pop up showing. ***************  " + alert1.getText());
+							Thread.sleep(4000);
+							alert1.accept();
+							Thread.sleep(2000);
+						}
+						else {
+							System.out.println(" **** Restriction Pop up not showing. ********  " + alert1.getText());
+
+						}
+						WebElement Submit = dashBoardXpath.Submit1;
+						if (Submit.isDisplayed()){
+							dashBoardXpath.clickOnAfterElementIsVisible(Submit);
+							Thread.sleep(5000);
+							System.out.println("Found Submit button");
+						}
+
+						try {
+							Alert abc = driver.switchTo().alert();
+							System.out.println("********Alert massage read:*******"+abc.getText());
+							reader.setCellData("goya","Successful Order place Message",2,abc.getText());
+							abc.accept();
+						}catch (Exception e){
+							System.out.println("Alert massage not read");
+						}
+
+					}
+				}
+			}
 	@When("I should Order Status tab click")
 	public void i_should_order_status_tab_click()throws Exception {
 		dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.OrderStatus);

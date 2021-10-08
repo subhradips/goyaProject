@@ -108,6 +108,8 @@ public class dashBoardXpath extends userHomePage {
 
     @FindBy(how = How.XPATH, using = "//body/div[1]/div[4]/div[9]/div[2]/div[1]/div[3]/button[2]")
     public WebElement Continue_Merge2;
+    @FindBy(how = How.XPATH, using = "//button[contains(text(),'Submit')]")
+    public WebElement Submit1;
 
     @FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[1]/div[4]/div[9]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/input[1]")
     public WebElement Marge_order;
