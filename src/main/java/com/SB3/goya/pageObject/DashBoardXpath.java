@@ -55,6 +55,8 @@ public class DashBoardXpath extends UserHomePage {
 
     @FindBy(how = How.XPATH, using = "//*[@id='hide-for-print']/div[2]/div[2]/div/div[2]/h4/b")
     public WebElement CustomerinvoicesuccessMessageElement;
+    @FindBy(how = How.XPATH, using = "//b[contains(text(),'712450-SHOP RITE 130')]")
+    public WebElement Pop_upmessage;
 
     @FindBy(how = How.XPATH,using = "//input[@value='Order Status']")
     public WebElement OrderStatus;
@@ -62,14 +64,22 @@ public class DashBoardXpath extends UserHomePage {
     @FindBy(how = How.XPATH,using = "//input[@value='Order Status']")
     public WebElement OrderStatus_page;
 
+    @FindBy(how = How.XPATH,using = "//ul[@class='nav navbar-nav navbar-center']//a[.='Home']")
+    public WebElement HomePage_Tab;
+
     @FindBy(how = How.XPATH, using = "//*[@id='idd']/div/div[4]/div[1]/section/div[3]/ul/li[7]/div/a/input")
     public WebElement Order;
     @FindBy(how = How.XPATH, using = "//a[@title='Search items list']")
     public WebElement Search_Iteam;
     @FindBy(how = How.XPATH, using = "//*[@id='qk-remove-space']/form/div/ul/li[2]/div/div")
     public WebElement Customer_Dropdown;
-    @FindBy(how = How.XPATH, using = "//*[@id='qk-remove-space']/form/div/ul/li[2]/div/div/div[2]/div/div/div[5]/div")
+    @FindBy(how = How.XPATH, using = "//b[contains(text(),'712450-SHOP RITE 130')]")
     public List<WebElement>  Customer_Dropdown_Value;
+
+    @FindBy(how = How.XPATH, using = "//body/div[1]/div[4]/div[1]/section[3]/div[1]/div[1]/form[1]/div[3]/div[1]/div[1]")
+    public WebElement Customer_Oder_Status_Dropdown;
+    @FindBy(how = How.XPATH, using = "//b[contains(text(),'712450-SHOP RITE 130')]")
+    public List<WebElement> Customer_Oder_Status_Dropdown_Value;
     @FindBy(how = How.XPATH, using = "//body/div[1]/div[4]/div[1]/div[3]/div[1]/div[1]/div[2]/p[2]/input[1]")
     public WebElement Search_Iteam_textBox;
     @FindBy(how = How.XPATH, using = "//button[contains(text(),'Add to Cart')]")
@@ -78,8 +88,7 @@ public class DashBoardXpath extends UserHomePage {
     public WebElement Pop_up_Add_To_Cart;
     @FindBy (how = How.XPATH,using = "//body/div[1]/div[4]/div[1]/div[5]/div[2]/div[1]/div[2]/h4[1]/button[2]")
     public WebElement Add_Product;
-
-    @FindBy (how = How.ID,using = "exampleInputName2")
+    @FindBy (how = How.XPATH,using = "//*[@id='exampleInputName2']")
     public WebElement Oder_Status_EOR;
 
     @FindBy (how = How.XPATH,using = "//tbody/tr[1]/td[12]/a[1]")
@@ -99,6 +108,14 @@ public class DashBoardXpath extends UserHomePage {
 
     @FindBy(how = How.XPATH, using = "//body/div[1]/div[4]/div[9]/div[2]/div[1]/div[3]/button[2]")
     public WebElement Continue_Merge2;
+
+    @FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[1]/div[4]/div[9]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/input[1]")
+    public WebElement Marge_order;
+
+
+    @FindBy(how = How.XPATH, using = "//button[contains(text(),'Confirm Merge Order')]")
+    public WebElement Confirm_Marge_order;
+
 
     public void enterValue(WebElement element, String value) {
         element.sendKeys(value);

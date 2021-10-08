@@ -10,6 +10,7 @@ import io.cucumber.java.an.E;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import jdk.internal.org.objectweb.asm.tree.analysis.Value;
 import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.Tesseract;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
@@ -86,7 +87,10 @@ public class LoginStepDefination extends GoyaBase {
 
 	@Given("^user is home page$")
 	public void user_is_home_page() throws Throwable {
+		dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.HomePage_Tab);
+		Thread.sleep(4000);
 		dashBoardXpath.equals(dashBoardXpath.Title);
+		Thread.sleep(3000);
 	}
 
 	@When("^I should customers tab click$")
@@ -122,85 +126,31 @@ public class LoginStepDefination extends GoyaBase {
 		dashBoardXpath.clickOn(dashBoardXpath.RadioButton);
 		System.out.println("Radio Button Click: " + "Press Radio Button");
 		Thread.sleep(1000);
-
-
 	}
 
 	@Then("^select button click$")
 	public void select_button_click() throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
 		dashBoardXpath.clickOn(dashBoardXpath.Select);
 		System.out.println("Select Button Click: " + "Select Button Click");
-		Thread.sleep(1000);
-
-		dashBoardXpath.checkElementVisibility(dashBoardXpath.CustomerinvoicesuccessMessageElement, 90);
-		if (dashBoardXpath.CustomerinvoicesuccessMessageElement.isDisplayed()) {
-			CustomerInvoiceMessage = CustomerInvoiceMessage.concat(dashBoardXpath.CustomerinvoicesuccessMessageElement.getText());
-			String acctualFinalMessage = CustomerInvoiceMessage;
-			char str[] = acctualFinalMessage.toCharArray();
-			int i = removeSpaces(str);
-			String value = (String) valueOf(str).subSequence(0, i);
-
-			char str1[] = acctualFinalMessage.toCharArray();
-			int j = removeSpaces(str1);
-			String value1 = (String) valueOf(str1).subSequence(0, j);
-
-			assertEquals(value1, value);
-			System.out.println("header file change name : " + acctualFinalMessage);
-			Thread.sleep(500);
-
-		} else {
-			System.out.println(CustomerInvoiceMessage + " Not Showing value ");
-		}
-		String invoiceNumber = DashBoardXpath.findStringUsingRegex(CustomerInvoiceMessage, DashBoardXpath.invoicePattern);
-		String giNumber = DashBoardXpath.findStringUsingRegex(CustomerInvoiceMessage, DashBoardXpath.giPattern);
-		System.out.println("Invoice number generated : " + invoiceNumber);
-		System.out.println("GI number generated : " + giNumber);
-
-		if (CustomerInvoiceMessage.contentEquals("712450-SHOP RITE 130")) {
-			String Message = reader.getCellData("goya","Massage",2);
-			Assert.assertEquals(Message.replace("invoiceNumber", invoiceNumber)
-					.replace("giNumber", giNumber), CustomerInvoiceMessage);
-			driver.manage().timeouts().implicitlyWait(240, TimeUnit.SECONDS);
-
-		}
-		if (CustomerInvoiceMessage.contentEquals("712453-SHOP RITE 130 FROZEN")) {
-			String Message1 = reader.getCellData("goya", "Massage", 3);
-			Assert.assertEquals(Message1.replace("invoiceNumber", invoiceNumber)
-					.replace("giNumber", giNumber), CustomerInvoiceMessage);
-			driver.manage().timeouts().implicitlyWait(240, TimeUnit.SECONDS);
-
-		}
-		if (CustomerInvoiceMessage.contentEquals("712457-RUMBA CUBANA OF TONNELLE CORP")) {
-			String Message2 = reader.getCellData("goya", "Massage", 4);
-			Assert.assertEquals(Message2.replace("invoiceNumber", invoiceNumber)
-					.replace("giNumber", giNumber), CustomerInvoiceMessage);
-			driver.manage().timeouts().implicitlyWait(240, TimeUnit.SECONDS);
-		}
-		if (CustomerInvoiceMessage.contentEquals("712590-FENIX 1 AND 2 /DGH BAKERY CORP")) {
-			String Message3 = reader.getCellData("goya", "Massage", 5);
-			Assert.assertEquals(Message3.replace("invoiceNumber", invoiceNumber)
-					.replace("giNumber", giNumber), CustomerInvoiceMessage);
-			driver.manage().timeouts().implicitlyWait(240, TimeUnit.SECONDS);
-		}
-		if (CustomerInvoiceMessage.contentEquals("712957-WAL-MART #3795")) {
-			String Message4 = reader.getCellData("goya", "Massage", 6);
-			Assert.assertEquals(Message4.replace("invoiceNumber", invoiceNumber)
-					.replace("giNumber", giNumber), CustomerInvoiceMessage);
-			driver.manage().timeouts().implicitlyWait(240, TimeUnit.SECONDS);
-		}
-		if (CustomerInvoiceMessage.contentEquals("712958-WAL-MART 3795 FROZEN")) {
-			String Message5 = reader.getCellData("goya", "Massage", 7);
-			Assert.assertEquals(Message5.replace("invoiceNumber", invoiceNumber)
-					.replace("giNumber", giNumber), CustomerInvoiceMessage);
-			driver.manage().timeouts().implicitlyWait(240, TimeUnit.SECONDS);
-		}
+		Thread.sleep(4000);
 
 	}
 
 	@Then("^then process button click$")
 	public void then_process_button_click() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
+
+		WebElement Pop_up_message = dashBoardXpath.Pop_upmessage;
+		if (Pop_up_message.isDisplayed()) {
+			String s = Pop_up_message.getText();
+			System.out.println(" Customer Value Save is: "+s);
+			Thread.sleep(4000);
+			System.out.println("******* Value Save in Excel: ************ "+reader.setCellData("goya", "CustomerSelectValue", 2, s));
+			Thread.sleep(4000);
+
+		} else {
+			System.out.println(" Not Showing value "+Pop_up_message.getText());
+		}
 		dashBoardXpath.clickOn(dashBoardXpath.process);
 		driver.manage().timeouts().implicitlyWait(240, TimeUnit.SECONDS);
 		Thread.sleep(1000);
@@ -220,7 +170,7 @@ public class LoginStepDefination extends GoyaBase {
 		// Write code here that turns the phrase above into concrete actions
 
 		String acctualFinalMessage = dashBoardXpath.HeaderTitle.getText();
-		String expectFinalMessage = CustomerInvoiceMessage;
+		String expectFinalMessage = reader.getCellData("goya","CustomerSelectValue",2);
 		char str[] = acctualFinalMessage.toCharArray();
 		int i = removeSpaces(str);
 		String value = (String) valueOf(str).subSequence(0, i);
@@ -230,7 +180,7 @@ public class LoginStepDefination extends GoyaBase {
 		String value1 = (String) valueOf(str1).subSequence(0, j);
 
 		assertEquals(value1, value);
-		System.out.println("header file change name : " + acctualFinalMessage);
+		System.out.println("********* Header file change name ************ : " + acctualFinalMessage);
 		Thread.sleep(500);
 
 	}
@@ -259,21 +209,21 @@ public class LoginStepDefination extends GoyaBase {
 	public void customer_dropdown_select_customer() throws Exception {
 		//Select customer_DropDown = new Select(dashBoardXpath.Customer_Dropdown);
 		dashBoardXpath.moveToElementAndCLikOn(dashBoardXpath.Customer_Dropdown);
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		dashBoardXpath.iterateWebElementListAndSelectValue(dashBoardXpath.Customer_Dropdown_Value, prop.getPropValues(GoyaConstants.dropdownValue));
-		Thread.sleep(2000);
+		Thread.sleep(7000);
 	}
 
 	@Then("Search Item Button click")
 	public void search_item_button_click() throws Exception {
 		dashBoardXpath.clickOn(dashBoardXpath.Search_Iteam);
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 	}
 
 	@Then("Search Items value in the textBox")
 	public void search_items_value_in_the_text_box() throws Exception {
 		dashBoardXpath.enterValue(dashBoardXpath.Search_Iteam_textBox, prop.getPropValues(GoyaConstants.SearchItemsValue));
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 	}
 
 	@Then("Click Add to Cart Button")
@@ -312,29 +262,61 @@ public class LoginStepDefination extends GoyaBase {
 	public void submit_button_click() throws Exception {
 		dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Submit);
 		Thread.sleep(3000);
-
 		dashBoardXpath.clickOn(dashBoardXpath.Continue_Merge);
 		Thread.sleep(3000);
 
 		WebElement popup1 = dashBoardXpath.Continue_Merge2;
-		if(popup1.isDisplayed()){
+		if (popup1.isDisplayed()) {
 			Thread.sleep(5000);
-			String EOR = reader.getCellData("goya","InvoiceNumber",2);
+			String EOR = reader.getCellData("goya", "InvoiceNumber", 2);
 			List<WebElement> dynamicElement = driver.findElements(By.xpath("//body/div[1]/div[4]/div[9]/div[2]/div[1]/div[2]"));
-			if (dynamicElement.size()>0){
-				System.out.println("Test: "+EOR+" is present ");
-				dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.checkbox_click);
-				popup1.click();
-			}
-			else {
-				System.out.println("Test: "+EOR+" is not present ");
-			}
+			if (dynamicElement.size() > 0) {
+				System.out.println("Test:=------========== " + EOR + "-----------========= is present ");
 
+				for (int iLoop = 0; iLoop < dynamicElement.size(); iLoop++) {
+					System.out.println("Column " + iLoop + " : '" + dynamicElement.get(iLoop).getText().toString() + "'");
+
+					WebElement MergeOrder = dashBoardXpath.Marge_order;
+					if (MergeOrder.isDisplayed()) {
+						dashBoardXpath.clickOnAfterElementIsVisible(MergeOrder);
+						System.out.println("Click Checkbox: " + MergeOrder.isDisplayed());
+						Thread.sleep(4000);
+					}
+					popup1.click();
+					System.out.println("Display MergeOrder Button and click:  " + popup1.isDisplayed());
+					Thread.sleep(4000);
+					WebElement Confirm_MergeOrder = dashBoardXpath.Confirm_Marge_order;
+					if (Confirm_MergeOrder.isDisplayed()) {
+						dashBoardXpath.clickOnAfterElementIsVisible(Confirm_MergeOrder);
+						System.out.println("Confirm_Marge_order Click:  " + Confirm_MergeOrder.isDisplayed());
+						Thread.sleep(4000);
+						try {
+							Alert alert = driver.switchTo().alert();
+							alert.accept();
+							System.out.println(" **** All selected order has been merged.********  " + alert.getText());
+							Thread.sleep(4000);
+						} catch (Exception e) {
+							dashBoardXpath.clickOnAfterElementIsVisible(Confirm_MergeOrder);
+							System.out.println("===================PopUp not showing=====================");
+							Thread.sleep(4000);
+						}
+					}
+					try {
+						Alert alert1 = driver.switchTo().alert();
+						alert1.accept();
+						System.out.println(" ******Please remove Restricted items.********Please remove Restricted items.*******  " + alert1.getText());
+						Thread.sleep(4000);
+					} catch (Exception e) {
+						dashBoardXpath.clickOnAfterElementIsVisible(Confirm_MergeOrder);
+						System.out.println("===================restriction PopUp not showing=====================");
+						Thread.sleep(4000);
+					}
+				}
+
+			}
 		}
 
 	}
-
-
 	@When("I should Order Status tab click")
 	public void i_should_order_status_tab_click()throws Exception {
 		dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.OrderStatus);
@@ -348,14 +330,27 @@ public class LoginStepDefination extends GoyaBase {
 		assertEquals("Order History",Order_Status_Page_veryfy);
 
 	}
+
+	@Then("Customer Order Status dropdown select Customer")
+	public void customer_order_status_dropdown_select_customer()throws Exception {
+
+		dashBoardXpath.moveToElementAndCLikOn(dashBoardXpath.Customer_Oder_Status_Dropdown);
+		Thread.sleep(4000);
+		dashBoardXpath.iterateWebElementListAndSelectValue(dashBoardXpath.Customer_Oder_Status_Dropdown_Value, prop.getPropValues(GoyaConstants.dropdownValue));
+		Thread.sleep(7000);
+
+	}
 	@Then("Search EOR number")
 	public void search_eor_number()throws Exception {
-		dashBoardXpath.enterValue(dashBoardXpath.Oder_Status_EOR,reader.getCellData("goya","InvoiceNumber",2));
+		WebElement EOR_SearchBox = dashBoardXpath.Oder_Status_EOR;
+		EOR_SearchBox.click();
+		dashBoardXpath.enterValue(EOR_SearchBox,reader.getCellData("goya","InvoiceNumber",2));
 		Thread.sleep(5000);
 	}
 	@Then("Product Edit")
 	public void product_edit()throws Exception {
 		dashBoardXpath.clickOn(dashBoardXpath.Order_Status_edit);
+		Thread.sleep(5000);
 
 	}
 }
