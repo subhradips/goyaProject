@@ -243,7 +243,7 @@ public class loginStepDefination extends goyaBase {
 	@Then("Submit button click")
 	public void submit_button_click() throws Exception {
 		dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Submit);
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		WebElement popup1 = dashBoardXpath.Continue_Merge2;
 		WebElement Submit1 = dashBoardXpath.Submit1;
 		if(Submit1.isDisplayed()){
@@ -277,21 +277,29 @@ public class loginStepDefination extends goyaBase {
 							dashBoardXpath.clickOnAfterElementIsVisible(Confirm_MergeOrder);
 							System.out.println("Confirm_Marge_order Click:  " + Confirm_MergeOrder.isDisplayed());
 							Thread.sleep(7000);
+							Alert abc = driver.switchTo().alert();
+							System.out.println("********Alert massage read:*******"+abc.getText());
+							reader.setCellData("goya","Successful Order place Message",2,abc.getText());
+							if (abc.getText().equals(abc.getText())){
+							abc.dismiss();
+								System.out.println(" pop up alart accept ");}else {
+							System.out.println(" Pop up alart not accept ");}
+							System.out.println("********Alert massage read:*******"+abc.getText());
+
 						}
 					}
-					try {
+					else {
 						Alert alert = driver.switchTo().alert();
+						if(alert.getText().equals(alert.getText())){
+
 						System.out.println(" **** All selected order has been merged.********  " + alert.getText());
 						Thread.sleep(3000);
-						alert.accept();
+						alert.accept();}
 
-					} catch (Exception e) {
+					else{
 						System.out.println("===================PopUp not showing=====================");
 						Thread.sleep(4000);
-						e.printStackTrace();
-
-
-					}
+						}
 				}
 
 
@@ -311,6 +319,7 @@ public class loginStepDefination extends goyaBase {
 							Thread.sleep(4000);
 							alert1.accept();
 							Thread.sleep(2000);
+
 						}
 						else {
 							System.out.println(" **** Restriction Pop up not showing. ********  " + alert1.getText());
@@ -327,7 +336,12 @@ public class loginStepDefination extends goyaBase {
 							Alert abc = driver.switchTo().alert();
 							System.out.println("********Alert massage read:*******"+abc.getText());
 							reader.setCellData("goya","Successful Order place Message",2,abc.getText());
-							abc.accept();
+							if(abc.getText().equals(abc.getText())){
+							abc.dismiss();
+							System.out.println("Pop up alart accept");}else {
+							System.out.println("Pop up alart not accept");}
+							System.out.println("********Alert massage read:*******"+abc.getText());
+
 						}catch (Exception e){
 							System.out.println("Alert massage not read");
 						}
@@ -335,6 +349,7 @@ public class loginStepDefination extends goyaBase {
 					}
 				}
 			}
+	}
 	@When("I should Order Status tab click")
 	public void i_should_order_status_tab_click()throws Exception {
 		dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.OrderStatus);

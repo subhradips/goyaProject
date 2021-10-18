@@ -6,16 +6,16 @@ Feature: Spring 1 goya project senario
     Then  I enter password
     Then  user clicks on login button
 
-#  Scenario: Customer
-#    Given user is home page
-#    When I should customers tab click
-#    Then customers Page verify
-#    Then given input search customer textbox
-#    Then chose customer
-#    Then select button click
-#    Then then process button click
-#    Then you have enter home page verify
-#    Then header file change name verify
+  Scenario: Customer
+    Given user is home page
+    When I should customers tab click
+    Then customers Page verify
+    Then given input search customer textbox
+    Then chose customer
+    Then select button click
+    Then then process button click
+    Then you have enter home page verify
+    Then header file change name verify
 
   Scenario: Order
     Given user is home page
@@ -32,17 +32,17 @@ Feature: Spring 1 goya project senario
     Then Submit button click
 
 
-#    Scenario: Order Status
-#      Given user is home page
-#      When I should Order Status tab click
-#      Then Customer Order Status dropdown select Customer
-#      Then Search EOR number
-#      Then Product Edit
-#      Then Search Item Button click
-#      Then Search Items value in the textBox
-#      Then Click Add to Cart Button
-#      Then Enter Quality amount
-#      Then pop_up Add to Cart Button Click
-#      Then Continue Button Click
-#      Then Store EOR Data
-#      Then Submit button click
+    Scenario: Order Status
+      Given user is home page
+      When I should Order Status tab click
+      Then Customer Order Status dropdown select Customer
+      Then Search EOR number
+      Then Product Edit
+      Then Search Item Button click
+      Then Search Items value in the textBox
+      Then Click Add to Cart Button
+      Then Enter Quality amount
+      Then pop_up Add to Cart Button Click
+      Then Continue Button Click
+      Then Store EOR Data
+      Then Submit button click

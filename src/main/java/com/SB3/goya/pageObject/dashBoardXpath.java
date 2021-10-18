@@ -58,7 +58,7 @@ public class dashBoardXpath extends userHomePage {
     @FindBy(how = How.XPATH, using = "//b[contains(text(),'712450-SHOP RITE 130')]")
     public WebElement Pop_upmessage;
 
-    @FindBy(how = How.XPATH,using = "//input[@value='Order Status']")
+    @FindBy(how = How.XPATH,using = "//*[@id='idd']/div[1]/div[4]/div[1]/section/div[3]/ul/li[9]/div/a")
     public WebElement OrderStatus;
 
     @FindBy(how = How.XPATH,using = "//input[@value='Order Status']")
