@@ -1,0 +1,11 @@
+com\goya\demo\pageObject\screenshot_File.class
+com\goya\demo\helpers\waitHelper.class
+com\goya\demo\pageObject\userHomePage.class
+com\goya\demo\goyaBase.class
+com\goya\demo\goyaGetPropertyValues.class
+com\goya\demo\stepdefs\loginStepDefination.class
+com\goya\demo\pageObject\dashBoardXpath.class
+com\goya\demo\pageObject\removerSpace.class
+com\goya\demo\pageObject\xls_Reader.class
+com\goya\demo\pageObject\driverStorage.class
+com\goya\demo\goyaConstants.class

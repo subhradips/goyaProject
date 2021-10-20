@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="176.531">
-<testcase classname="Spring 1 goya project senario" name="Login Page" time="32.053">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="156.682">
+<testcase classname="Spring 1 goya project scenario" name="Login Page" time="26.863">
 <system-out><![CDATA[Given I am on the Login page................................................passed
 When I should see Sign In Page..............................................passed
 Then I enter username.......................................................passed
@@ -8,80 +8,37 @@ Then I enter password.......................................................pass
 Then user clicks on login button............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Spring 1 goya project senario" name="Customer" time="42.631">
+<testcase classname="Spring 1 goya project scenario" name="Customer" time="34.934">
 <system-out><![CDATA[Given user is home page.....................................................passed
-When I should customers tab click...........................................passed
+When i click customers tab..................................................passed
 Then customers Page verify..................................................passed
 Then given input search customer textbox....................................passed
-Then chose customer.........................................................passed
-Then select button click....................................................passed
-Then then process button click..............................................passed
+Then choose customer........................................................passed
+Then click on select button.................................................passed
+Then click on process button................................................passed
 Then you have enter home page verify........................................passed
-Then header file change name verify.........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Spring 1 goya project senario" name="Order" time="93.87">
+<testcase classname="Spring 1 goya project scenario" name="Order" time="61.538">
 <system-out><![CDATA[Given user is home page.....................................................passed
-When I should Order tab click...............................................passed
-Then Order Page verify......................................................passed
-Then Customer dropdown select Customer......................................passed
-Then Search Item Button click...............................................passed
-Then Search Items value in the textBox......................................passed
-Then Click Add to Cart Button...............................................passed
-Then Enter Quality amount...................................................passed
-Then pop_up Add to Cart Button Click........................................passed
-Then Continue Button Click..................................................passed
-Then Store EOR Data.........................................................passed
-Then Submit button click....................................................passed
+When click on Order tab.....................................................passed
+Then order Page verify......................................................passed
+Then customer dropdown select Customer......................................passed
+Then click on Search Item Button............................................passed
+Then search Items value in the textBox......................................passed
+Then click on Add to Cart Button............................................passed
+Then enter Quantity.........................................................passed
+Then click on pop_up Add to Cart Button.....................................passed
+Then click on continue Button...............................................passed
+Then store EOR Data.........................................................passed
+Then click on Submit button.................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Spring 1 goya project senario" name="Order Status" time="7.405">
-<failure message="unknown error: Element &lt;a ui-sref=&quot;searchorderentry&quot; ng-class=&quot;{dsbleMenu:((menu.Description!='Customers' &amp;amp;&amp;amp; online==false) &amp;amp;&amp;amp; (menu.Description!='Order' &amp;amp;&amp;amp; online==false) &amp;amp;&amp;amp; (menu.Description!='Home' &amp;amp;&amp;amp; online==false)) || ((menu.Description!='Customers' &amp;amp;&amp;amp; manualOffline==true) &amp;amp;&amp;amp; (menu.Description!='Order' &amp;amp;&amp;amp; manualOffline==true) &amp;amp;&amp;amp; (menu.Description!='Home' &amp;amp;&amp;amp; manualOffline==true))}&quot; href=&quot;#/search-order-entry/&quot;&gt;...&lt;/a&gt; is not clickable at point (681, 472). Other element would receive the click: &lt;input class=&quot;btn btn-default&quot; ng-class=&quot;{'offlineDis':((menu.Description!='Customers' &amp;amp;&amp;amp; online==false) &amp;amp;&amp;amp; (menu.Description!='Order' &amp;amp;&amp;amp; online==false) &amp;amp;&amp;amp; (menu.Description!='Home' &amp;amp;&amp;amp; online==false))||((menu.Description!='Customers' &amp;amp;&amp;amp; manualOffline==true) &amp;amp;&amp;amp; (menu.Description!='Order' &amp;amp;&amp;amp; manualOffline==true) &amp;amp;&amp;amp; (menu.Description!='Home' &amp;amp;&amp;amp; manualOffline==true))}&quot; type=&quot;submit&quot; value=&quot;Customers&quot;&gt;&#10;  (Session info: chrome=94.0.4606.81)&#10;  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.19042 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'SB3TS-02', ip: '192.168.255.74', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\SUBHRA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 94.0.4606.81, webStorageEnabled: true}&#10;Session ID: 8784c025897606c5ec9bd87b25bdcd20" type="org.openqa.selenium.WebDriverException"><![CDATA[Given user is home page.....................................................passed
-When I should Order Status tab click........................................failed
-Then Customer Order Status dropdown select Customer.........................skipped
-Then Search EOR number......................................................skipped
-Then Product Edit...........................................................skipped
-Then Search Item Button click...............................................skipped
-Then Search Items value in the textBox......................................skipped
-Then Click Add to Cart Button...............................................skipped
-Then Enter Quality amount...................................................skipped
-Then pop_up Add to Cart Button Click........................................skipped
-Then Continue Button Click..................................................skipped
-Then Store EOR Data.........................................................skipped
-Then Submit button click....................................................skipped
-
-StackTrace:
-org.openqa.selenium.WebDriverException: unknown error: Element <a ui-sref="searchorderentry" ng-class="{dsbleMenu:((menu.Description!='Customers' &amp;&amp; online==false) &amp;&amp; (menu.Description!='Order' &amp;&amp; online==false) &amp;&amp; (menu.Description!='Home' &amp;&amp; online==false)) || ((menu.Description!='Customers' &amp;&amp; manualOffline==true) &amp;&amp; (menu.Description!='Order' &amp;&amp; manualOffline==true) &amp;&amp; (menu.Description!='Home' &amp;&amp; manualOffline==true))}" href="#/search-order-entry/">...</a> is not clickable at point (681, 472). Other element would receive the click: <input class="btn btn-default" ng-class="{'offlineDis':((menu.Description!='Customers' &amp;&amp; online==false) &amp;&amp; (menu.Description!='Order' &amp;&amp; online==false) &amp;&amp; (menu.Description!='Home' &amp;&amp; online==false))||((menu.Description!='Customers' &amp;&amp; manualOffline==true) &amp;&amp; (menu.Description!='Order' &amp;&amp; manualOffline==true) &amp;&amp; (menu.Description!='Home' &amp;&amp; manualOffline==true))}" type="submit" value="Customers">
-  (Session info: chrome=94.0.4606.81)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.19042 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'SB3TS-02', ip: '192.168.255.74', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\SUBHRA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 94.0.4606.81, webStorageEnabled: true}
-Session ID: 8784c025897606c5ec9bd87b25bdcd20
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at sun.reflect.GeneratedMethodAccessor42.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy15.click(Unknown Source)
-	at com.SB3.goya.pageObject.dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.java:146)
-	at com.SB3.goya.stepdefs.loginStepDefination.i_should_order_status_tab_click(loginStepDefination.java:355)
-	at ✽.I should Order Status tab click(file:///D:/Automation/goyaProject/./src/test/resources/features/login.feature:37)
-]]></failure>
+<testcase classname="Spring 1 goya project scenario" name="Order Status" time="32.257">
+<system-out><![CDATA[Given user is home page.....................................................passed
+When i click on Order Status tab............................................passed
+Then customer Order Status dropdown select Customer.........................passed
+Then Store EOR Data input...................................................passed
+]]></system-out>
 </testcase>
 </testsuite>

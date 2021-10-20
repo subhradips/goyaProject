@@ -3,59 +3,59 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-10-18T09:35:21.891Z",
-        "line": 2,
+        "start_timestamp": "2021-10-20T22:11:12.082Z",
+        "line": 3,
         "name": "Login Page",
         "description": "",
-        "id": "spring-1-goya-project-senario;login-page",
+        "id": "spring-1-goya-project-scenario;login-page",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 18792000000,
+              "duration": 14832000000,
               "status": "passed"
             },
-            "line": 3,
+            "line": 4,
             "name": "I am on the Login page",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.i_am_on_the_Login_page()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.i_am_on_the_login_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1114000000,
+              "duration": 1029000000,
               "status": "passed"
             },
-            "line": 4,
+            "line": 5,
             "name": "I should see Sign In Page",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.i_should_see_Sign_In_Page()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.i_should_see_sign_in_page()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 8625000000,
+              "duration": 6479000000,
               "status": "passed"
             },
-            "line": 5,
+            "line": 6,
             "name": "I enter username",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.i_enter_username()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.i_enter_username()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1205000000,
+              "duration": 2168000000,
               "status": "passed"
             },
-            "line": 6,
+            "line": 7,
             "name": "I enter password",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.i_enter_password()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.i_enter_password()"
             },
             "keyword": "Then "
           },
@@ -64,450 +64,340 @@
               "duration": 2156000000,
               "status": "passed"
             },
-            "line": 7,
+            "line": 8,
             "name": "user clicks on login button",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.user_clicks_on_login_button()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.user_clicks_on_login_button()"
             },
             "keyword": "Then "
           }
         ]
       },
       {
-        "start_timestamp": "2021-10-18T09:35:53.991Z",
-        "line": 9,
+        "start_timestamp": "2021-10-20T22:11:38.996Z",
+        "line": 10,
         "name": "Customer",
         "description": "",
-        "id": "spring-1-goya-project-senario;customer",
+        "id": "spring-1-goya-project-scenario;customer",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 7285000000,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "user is home page",
-            "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.user_is_home_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 3148000000,
+              "duration": 7219000000,
               "status": "passed"
             },
             "line": 11,
-            "name": "I should customers tab click",
+            "name": "user is home page",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.i_should_customers_tab_click()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.user_is_home_page()"
             },
-            "keyword": "When "
+            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1051000000,
+              "duration": 3142000000,
               "status": "passed"
             },
             "line": 12,
-            "name": "customers Page verify",
+            "name": "i click customers tab",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.customers_Page_verify()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.i_click_customers_tab()"
             },
-            "keyword": "Then "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 1641000000,
+              "duration": 1060000000,
               "status": "passed"
             },
             "line": 13,
-            "name": "given input search customer textbox",
+            "name": "customers Page verify",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.given_input_search_customer_textbox()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.customers_page_verify()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 3166000000,
+              "duration": 1687000000,
               "status": "passed"
             },
             "line": 14,
-            "name": "chose customer",
+            "name": "given input search customer textbox",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.chose_customer()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.given_input_search_customer_textbox()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 6147000000,
+              "duration": 3176000000,
               "status": "passed"
             },
             "line": 15,
-            "name": "select button click",
+            "name": "choose customer",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.select_button_click()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.choose_customer()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 11902000000,
+              "duration": 6166000000,
               "status": "passed"
             },
             "line": 16,
-            "name": "then process button click",
+            "name": "click on select button",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.then_process_button_click()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_select_button()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 7723000000,
+              "duration": 11897000000,
               "status": "passed"
             },
             "line": 17,
-            "name": "you have enter home page verify",
+            "name": "click on process button",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.you_have_enter_home_page_verify()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_process_button()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 568000000,
+              "duration": 573000000,
               "status": "passed"
             },
             "line": 18,
-            "name": "header file change name verify",
+            "name": "you have enter home page verify",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.header_file_change_name_verify()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.you_have_enter_home_page_verify()"
             },
             "keyword": "Then "
           }
         ]
       },
       {
-        "start_timestamp": "2021-10-18T09:36:36.637Z",
-        "line": 20,
+        "start_timestamp": "2021-10-20T22:12:13.962Z",
+        "line": 21,
         "name": "Order",
         "description": "",
-        "id": "spring-1-goya-project-senario;order",
+        "id": "spring-1-goya-project-scenario;order",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 7162000000,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "user is home page",
-            "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.user_is_home_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 700000000,
+              "duration": 7185000000,
               "status": "passed"
             },
             "line": 22,
-            "name": "I should Order tab click",
+            "name": "user is home page",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.i_should_order_tab_click()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.user_is_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2177000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "click on Order tab",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_order_tab()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 1490000000,
-              "status": "passed"
-            },
-            "line": 23,
-            "name": "Order Page verify",
-            "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.order_page_verify()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 11339000000,
+              "duration": 2089000000,
               "status": "passed"
             },
             "line": 24,
-            "name": "Customer dropdown select Customer",
+            "name": "order Page verify",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.customer_dropdown_select_customer()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.order_page_verify()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 7190000000,
+              "duration": 4449000000,
               "status": "passed"
             },
             "line": 25,
-            "name": "Search Item Button click",
+            "name": "customer dropdown select Customer",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.search_item_button_click()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.customer_dropdown_select_customer()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 10649000000,
+              "duration": 5158000000,
               "status": "passed"
             },
             "line": 26,
-            "name": "Search Items value in the textBox",
+            "name": "click on Search Item Button",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.search_items_value_in_the_text_box()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_search_item_button()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 5194000000,
+              "duration": 6795000000,
               "status": "passed"
             },
             "line": 27,
-            "name": "Click Add to Cart Button",
+            "name": "search Items value in the textBox",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.click_add_to_cart_button()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.search_items_value_in_the_text_box()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 7125000000,
+              "duration": 3176000000,
               "status": "passed"
             },
             "line": 28,
-            "name": "Enter Quality amount",
+            "name": "click on Add to Cart Button",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.enter_quality_amount()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_add_to_cart_button()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 5185000000,
+              "duration": 7174000000,
               "status": "passed"
             },
             "line": 29,
-            "name": "pop_up Add to Cart Button Click",
+            "name": "enter Quantity",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.pop_up_add_to_cart_button_click()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.enter_quantity()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 5358000000,
+              "duration": 5176000000,
               "status": "passed"
             },
             "line": 30,
-            "name": "Continue Button Click",
+            "name": "click on pop_up Add to Cart Button",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.continue_button_click()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_pop_up_add_to_cart_button()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 5098000000,
+              "duration": 5401000000,
               "status": "passed"
             },
             "line": 31,
-            "name": "Store EOR Data",
+            "name": "click on continue Button",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.store_eor_data()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_continue_button()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 27378000000,
+              "duration": 5113000000,
               "status": "passed"
             },
             "line": 32,
-            "name": "Submit button click",
+            "name": "store EOR Data",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.submit_button_click()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.store_eor_data()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7626000000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "click on Submit button",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_submit_button()"
             },
             "keyword": "Then "
           }
         ]
       },
       {
-        "start_timestamp": "2021-10-18T09:38:10.507Z",
-        "line": 35,
+        "start_timestamp": "2021-10-20T22:13:15.519Z",
+        "line": 36,
         "name": "Order Status",
         "description": "",
-        "id": "spring-1-goya-project-senario;order-status",
+        "id": "spring-1-goya-project-scenario;order-status",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 7233000000,
+              "duration": 7280000000,
               "status": "passed"
             },
-            "line": 36,
+            "line": 37,
             "name": "user is home page",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.user_is_home_page()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.user_is_home_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "error_message": "org.openqa.selenium.WebDriverException: unknown error: Element \u003ca ui-sref\u003d\"searchorderentry\" ng-class\u003d\"{dsbleMenu:((menu.Description!\u003d\u0027Customers\u0027 \u0026amp;\u0026amp; online\u003d\u003dfalse) \u0026amp;\u0026amp; (menu.Description!\u003d\u0027Order\u0027 \u0026amp;\u0026amp; online\u003d\u003dfalse) \u0026amp;\u0026amp; (menu.Description!\u003d\u0027Home\u0027 \u0026amp;\u0026amp; online\u003d\u003dfalse)) || ((menu.Description!\u003d\u0027Customers\u0027 \u0026amp;\u0026amp; manualOffline\u003d\u003dtrue) \u0026amp;\u0026amp; (menu.Description!\u003d\u0027Order\u0027 \u0026amp;\u0026amp; manualOffline\u003d\u003dtrue) \u0026amp;\u0026amp; (menu.Description!\u003d\u0027Home\u0027 \u0026amp;\u0026amp; manualOffline\u003d\u003dtrue))}\" href\u003d\"#/search-order-entry/\"\u003e...\u003c/a\u003e is not clickable at point (681, 472). Other element would receive the click: \u003cinput class\u003d\"btn btn-default\" ng-class\u003d\"{\u0027offlineDis\u0027:((menu.Description!\u003d\u0027Customers\u0027 \u0026amp;\u0026amp; online\u003d\u003dfalse) \u0026amp;\u0026amp; (menu.Description!\u003d\u0027Order\u0027 \u0026amp;\u0026amp; online\u003d\u003dfalse) \u0026amp;\u0026amp; (menu.Description!\u003d\u0027Home\u0027 \u0026amp;\u0026amp; online\u003d\u003dfalse))||((menu.Description!\u003d\u0027Customers\u0027 \u0026amp;\u0026amp; manualOffline\u003d\u003dtrue) \u0026amp;\u0026amp; (menu.Description!\u003d\u0027Order\u0027 \u0026amp;\u0026amp; manualOffline\u003d\u003dtrue) \u0026amp;\u0026amp; (menu.Description!\u003d\u0027Home\u0027 \u0026amp;\u0026amp; manualOffline\u003d\u003dtrue))}\" type\u003d\"submit\" value\u003d\"Customers\"\u003e\n  (Session info: chrome\u003d94.0.4606.81)\n  (Driver info: chromedriver\u003d2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform\u003dWindows NT 10.0.19042 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027SB3TS-02\u0027, ip: \u0027192.168.255.74\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_301\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\\Users\\SUBHRA~1\\AppData\\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 94.0.4606.81, webStorageEnabled: true}\nSession ID: 8784c025897606c5ec9bd87b25bdcd20\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\r\n\tat sun.reflect.GeneratedMethodAccessor42.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat com.sun.proxy.$Proxy15.click(Unknown Source)\r\n\tat com.SB3.goya.pageObject.dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.java:146)\r\n\tat com.SB3.goya.stepdefs.loginStepDefination.i_should_order_status_tab_click(loginStepDefination.java:355)\r\n\tat ✽.I should Order Status tab click(file:///D:/Automation/goyaProject/./src/test/resources/features/login.feature:37)\r\n",
-              "duration": 172000000,
-              "status": "failed"
+              "duration": 3206000000,
+              "status": "passed"
             },
-            "line": 37,
-            "name": "I should Order Status tab click",
+            "line": 38,
+            "name": "i click on Order Status tab",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.i_should_order_status_tab_click()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.i_click_on_order_status_tab()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "skipped"
-            },
-            "line": 38,
-            "name": "Customer Order Status dropdown select Customer",
-            "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.customer_order_status_dropdown_select_customer()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
+              "duration": 11452000000,
+              "status": "passed"
             },
             "line": 39,
-            "name": "Search EOR number",
+            "name": "customer Order Status dropdown select Customer",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.search_eor_number()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.customer_order_status_dropdown_select_customer()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 10313000000,
+              "status": "passed"
             },
             "line": 40,
-            "name": "Product Edit",
+            "name": "Store EOR Data input",
             "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.product_edit()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 41,
-            "name": "Search Item Button click",
-            "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.search_item_button_click()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 42,
-            "name": "Search Items value in the textBox",
-            "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.search_items_value_in_the_text_box()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 43,
-            "name": "Click Add to Cart Button",
-            "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.click_add_to_cart_button()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 44,
-            "name": "Enter Quality amount",
-            "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.enter_quality_amount()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 45,
-            "name": "pop_up Add to Cart Button Click",
-            "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.pop_up_add_to_cart_button_click()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 46,
-            "name": "Continue Button Click",
-            "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.continue_button_click()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 47,
-            "name": "Store EOR Data",
-            "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.store_eor_data()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 48,
-            "name": "Submit button click",
-            "match": {
-              "location": "com.SB3.goya.stepdefs.loginStepDefination.submit_button_click()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.store_eor_data_input()"
             },
             "keyword": "Then "
           }
         ]
       }
     ],
-    "name": "Spring 1 goya project senario",
+    "name": "Spring 1 goya project scenario",
     "description": "",
-    "id": "spring-1-goya-project-senario",
+    "id": "spring-1-goya-project-scenario",
     "keyword": "Feature",
     "uri": "file:src/test/resources/features/login.feature",
     "tags": []
