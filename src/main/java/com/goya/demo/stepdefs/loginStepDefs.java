@@ -12,6 +12,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.Color;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -46,10 +47,25 @@ public class loginStepDefs extends goyaBase {
         System.out.println(reader.getCellData("goya","UserName",2));
         Thread.sleep(2000);
     }
+
+    @Then("I enter wrong username")
+    public void i_enter_wrong_username()throws Exception {
+        driverStorage_xpath.enterValue(driverStorage_xpath.username, reader.getCellData("goya","UserName",3));
+        System.out.println(reader.getCellData("goya","UserName",3));
+        Thread.sleep(2000);
+    }
+
     @Then("I enter password")
     public void i_enter_password()throws Exception {
         driverStorage_xpath.enterValue(driverStorage_xpath.password, reader.getCellData("goya","Password",2));
         System.out.println(reader.getCellData("goya","Password",2));
+        Thread.sleep(2000);
+    }
+
+    @Then("I enter wrong password")
+    public void i_enter_wrong_password()throws Exception {
+        driverStorage_xpath.enterValue(driverStorage_xpath.password, reader.getCellData("goya","Password",3));
+        System.out.println(reader.getCellData("goya","Password",3));
         Thread.sleep(2000);
     }
     @Then("user clicks on login button")
@@ -60,22 +76,23 @@ public class loginStepDefs extends goyaBase {
 
     @Given("user is home page")
     public void user_is_home_page()throws Exception {
-        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.HomePage_Tab);
-        Thread.sleep(4000);
-        dashBoardXpath.equals(dashBoardXpath.Title);
         Thread.sleep(3000);
+        dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.HomePage_Tab);
+        System.out.println("HomePage_Tab Click");
+        driver.navigate().refresh();
+        Thread.sleep(4000);
     }
     @When("i click customers tab")
     public void i_click_customers_tab()throws Exception {
         dashBoardXpath.clickOn(dashBoardXpath.Customers);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
     }
     @Then("customers Page verify")
     public void customers_page_verify()throws Exception {
         String actualTitle = dashBoardXpath.Customers_Page.getText();
         assertEquals("Customers", actualTitle);
         System.out.println("Customers: " + actualTitle);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
     }
     @Then("given input search customer textbox")
@@ -83,13 +100,13 @@ public class loginStepDefs extends goyaBase {
         String customer1 = reader.getCellData("goya", "CustomerID", 2);
         dashBoardXpath.enterValue(dashBoardXpath.Search_Customer, customer1);
         System.out.println("given input search customer textbox: " + customer1);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
     }
     @Then("choose customer")
     public void choose_customer()throws Exception {
         dashBoardXpath.clickOn(dashBoardXpath.RadioButton);
         System.out.println("Radio Button Click: " + "Press Radio Button");
-        Thread.sleep(1000);
+        Thread.sleep(2000);
     }
     @Then("click on select button")
     public void click_on_select_button()throws Exception {
@@ -139,8 +156,8 @@ public class loginStepDefs extends goyaBase {
     public void click_on_order_tab()throws Exception {
         if (dashBoardXpath.Order.isDisplayed()) {
             dashBoardXpath.Order.click();
-            System.out.println("Order Button Click:  " + dashBoardXpath.Order.getText());
             Thread.sleep(2000);
+            System.out.println("Order Button Display");
     }
     }
     @Then("order Page verify")
@@ -149,18 +166,18 @@ public class loginStepDefs extends goyaBase {
         String expect = "Search Item";
         assertEquals(expect, accual);
         System.out.println(expect + accual);
-        Thread.sleep(2000);
     }
     @Then("customer dropdown select Customer")
     public void customer_dropdown_select_customer()throws Exception {
-        dashBoardXpath.moveToElementAndCLikOn(dashBoardXpath.Customer_Dropdown);
         Thread.sleep(2000);
-        dashBoardXpath.iterateWebElementListAndSelectValue(dashBoardXpath.Customer_Dropdown_Value, prop.getPropValues(goyaConstants.dropdownValue));
+        dashBoardXpath.moveToElementAndCLikOn(dashBoardXpath.Customer_Dropdown);
+        dashBoardXpath.iterateWebElementListAndSelectValue(dashBoardXpath.Customer_Dropdown_Value, reader.getCellData("goya","CustomerID",3));
         Thread.sleep(2000);
     }
     @Then("click on Search Item Button")
     public void click_on_search_item_button()throws Exception {
         dashBoardXpath.clickOn(dashBoardXpath.Search_Iteam);
+        System.out.println("dashBoardXpath.Search_Iteam click");
         Thread.sleep(3000);
     }
     @Then("search Items value in the textBox")
@@ -171,24 +188,37 @@ public class loginStepDefs extends goyaBase {
         System.out.println("************Search Items Value is:************ "+reader.getCellData("goya","Search Items Value",2));
         Thread.sleep(3000);
     }
+
+    @Then("search Items negative value in the textBox")
+    public void search_items_negative_value_in_the_text_box()throws Exception {
+        dashBoardXpath.Search_Iteam_textBox.clear();
+        Thread.sleep(3000);
+        dashBoardXpath.enterValue(dashBoardXpath.Search_Iteam_textBox, reader.getCellData("goya","Search Items Value",3));
+        System.out.println("************Search Items Value is:************ "+reader.getCellData("goya","Search Items Value",3));
+        Thread.sleep(3000);
+    }
     @Then("click on Add to Cart Button")
     public void click_on_add_to_cart_button()throws Exception {
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Add_To_Cart);
+        System.out.println("dashBoardXpath.Add_To_Cart click");
         Thread.sleep(3000);
     }
     @Then("enter Quantity")
     public void enter_quantity()throws Exception {
         dashBoardXpath.clickOn(dashBoardXpath.Add_Product);
+        System.out.println("dashBoardXpath.Add_Product click");
         Thread.sleep(5000);
     }
     @Then("click on pop_up Add to Cart Button")
     public void click_on_pop_up_add_to_cart_button()throws Exception {
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Pop_up_Add_To_Cart);
+        System.out.println("dashBoardXpath.Pop_up_Add_To_Cart click");
         Thread.sleep(5000);
     }
     @Then("click on continue Button")
     public void click_on_continue_button()throws Exception {
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Continue);
+        System.out.println("dashBoardXpath.Continue click");
         Thread.sleep(5000);
     }
     @Then("store EOR Data")
@@ -197,9 +227,40 @@ public class loginStepDefs extends goyaBase {
         System.out.println("EOR Invoice Number is: "+s);
         reader.setCellData("goya", "InvoiceNumber", 2, s);
         Thread.sleep(5000);
+
     }
+    @Then("negative store EOR Data")
+    public void negative_store_eor_data()throws Exception {
+        String s = ((JavascriptExecutor) driver).executeScript("return document.getElementById('eor').value").toString();
+        System.out.println("EOR Invoice Number is: "+s);
+        reader.setCellData("goya", "InvoiceNumber", 2, s);
+        Thread.sleep(5000);
+
+        String Red_background = driver.findElement(By.xpath("//tr[@class='font-size2 ng-scope itemBackground']")).getCssValue("background-color");
+        String hex = Color.fromString(Red_background).asHex();
+        System.out.println("Read Red_background Color:  " + hex);
+        if (hex.equals("#ffb3b3")) {
+            assertEquals("#ffb3b3", hex);
+            WebElement color_delete = driver.findElement(By.xpath("//tbody/tr[1]//td[@name='deleteItem']"));
+            color_delete.click();
+            Thread.sleep(2000);
+            driver.switchTo().alert().accept();
+            Thread.sleep(2000);
+            click_on_search_item_button();
+            search_items_value_in_the_text_box();
+            click_on_add_to_cart_button();
+            enter_quantity();
+            click_on_pop_up_add_to_cart_button();
+            click_on_continue_button();
+
+
+
+        }
+    }
+
     @Then("click on Submit button")
     public void click_on_submit_button()throws Exception {
+        Thread.sleep(3000);
         dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Submit);
         Thread.sleep(3000);
         WebElement popup1 = dashBoardXpath.Continue_Merge2;
@@ -207,8 +268,12 @@ public class loginStepDefs extends goyaBase {
         if(Submit1.isDisplayed()){
             dashBoardXpath.clickOnAfterElementIsVisible(dashBoardXpath.Submit1);
             System.out.println("******** Click Submit button: ***********"+Submit1.isDisplayed());
-            Thread.sleep(2000);
+//            Thread.sleep(2000);
+//            dashBoardXpath.clickOn(dashBoardXpath.pop_up_Submit);
+            System.out.println("pop_up_Submit click");
+            Thread.sleep(5000);
             Alert abc = driver.switchTo().alert();
+            Thread.sleep(4000);
             System.out.println("********Alert massage read:*******"+abc.getText());
             reader.setCellData("goya","Successful Order place Message",2,abc.getText());
             abc.dismiss();
@@ -244,6 +309,7 @@ public class loginStepDefs extends goyaBase {
                             if (abc.getText().equals(abc.getText())){
                                 abc.dismiss();
                                 System.out.println(" pop up alart accept ");
+                                Thread.sleep(2000);
                                 dashBoardXpath.clickOn(dashBoardXpath.pop_up_Submit_order);
                             }else {
                                 System.out.println(" Pop up alart not accept ");}
@@ -331,7 +397,7 @@ public class loginStepDefs extends goyaBase {
         WebElement EOR_SearchBox = dashBoardXpath.Oder_Status_EOR;
         EOR_SearchBox.click();
         dashBoardXpath.enterValue(EOR_SearchBox,reader.getCellData("goya","InvoiceNumber",2));
-        Thread.sleep(10000);
+        Thread.sleep(15000);
     }
 
 }

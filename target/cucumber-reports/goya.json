@@ -3,17 +3,17 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-10-20T22:11:12.082Z",
+        "start_timestamp": "2021-10-21T20:37:38.252Z",
         "line": 3,
-        "name": "Login Page",
+        "name": "Negative scenario Login Page",
         "description": "",
-        "id": "spring-1-goya-project-scenario;login-page",
+        "id": "spring-1-goya-project-scenario;negative-scenario-login-page",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 14832000000,
+              "duration": 14017000000,
               "status": "passed"
             },
             "line": 4,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 1029000000,
+              "duration": 1024000000,
               "status": "passed"
             },
             "line": 5,
@@ -37,31 +37,31 @@
           },
           {
             "result": {
-              "duration": 6479000000,
+              "duration": 10431000000,
               "status": "passed"
             },
             "line": 6,
-            "name": "I enter username",
+            "name": "I enter wrong username",
             "match": {
-              "location": "com.goya.demo.stepdefs.loginStepDefs.i_enter_username()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.i_enter_wrong_username()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 2168000000,
+              "duration": 2182000000,
               "status": "passed"
             },
             "line": 7,
-            "name": "I enter password",
+            "name": "I enter wrong password",
             "match": {
-              "location": "com.goya.demo.stepdefs.loginStepDefs.i_enter_password()"
+              "location": "com.goya.demo.stepdefs.loginStepDefs.i_enter_wrong_password()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 2156000000,
+              "duration": 2216000000,
               "status": "passed"
             },
             "line": 8,
@@ -74,8 +74,79 @@
         ]
       },
       {
-        "start_timestamp": "2021-10-20T22:11:38.996Z",
+        "start_timestamp": "2021-10-21T20:38:08.288Z",
         "line": 10,
+        "name": "Login Page",
+        "description": "",
+        "id": "spring-1-goya-project-scenario;login-page",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2378000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I am on the Login page",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.i_am_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1027000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I should see Sign In Page",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.i_should_see_sign_in_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6184000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I enter username",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.i_enter_username()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2207000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I enter password",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.i_enter_password()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2134000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user clicks on login button",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.user_clicks_on_login_button()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-10-21T20:38:22.262Z",
+        "line": 17,
         "name": "Customer",
         "description": "",
         "id": "spring-1-goya-project-scenario;customer",
@@ -84,10 +155,10 @@
         "steps": [
           {
             "result": {
-              "duration": 7219000000,
+              "duration": 7285000000,
               "status": "passed"
             },
-            "line": 11,
+            "line": 18,
             "name": "user is home page",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.user_is_home_page()"
@@ -96,10 +167,10 @@
           },
           {
             "result": {
-              "duration": 3142000000,
+              "duration": 6535000000,
               "status": "passed"
             },
-            "line": 12,
+            "line": 19,
             "name": "i click customers tab",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.i_click_customers_tab()"
@@ -108,10 +179,10 @@
           },
           {
             "result": {
-              "duration": 1060000000,
+              "duration": 2085000000,
               "status": "passed"
             },
-            "line": 13,
+            "line": 20,
             "name": "customers Page verify",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.customers_page_verify()"
@@ -120,10 +191,10 @@
           },
           {
             "result": {
-              "duration": 1687000000,
+              "duration": 2497000000,
               "status": "passed"
             },
-            "line": 14,
+            "line": 21,
             "name": "given input search customer textbox",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.given_input_search_customer_textbox()"
@@ -132,10 +203,10 @@
           },
           {
             "result": {
-              "duration": 3176000000,
+              "duration": 4180000000,
               "status": "passed"
             },
-            "line": 15,
+            "line": 22,
             "name": "choose customer",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.choose_customer()"
@@ -144,10 +215,10 @@
           },
           {
             "result": {
-              "duration": 6166000000,
+              "duration": 6149000000,
               "status": "passed"
             },
-            "line": 16,
+            "line": 23,
             "name": "click on select button",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_select_button()"
@@ -156,10 +227,10 @@
           },
           {
             "result": {
-              "duration": 11897000000,
+              "duration": 12042000000,
               "status": "passed"
             },
-            "line": 17,
+            "line": 24,
             "name": "click on process button",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_process_button()"
@@ -168,10 +239,10 @@
           },
           {
             "result": {
-              "duration": 573000000,
+              "duration": 575000000,
               "status": "passed"
             },
-            "line": 18,
+            "line": 25,
             "name": "you have enter home page verify",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.you_have_enter_home_page_verify()"
@@ -181,8 +252,8 @@
         ]
       },
       {
-        "start_timestamp": "2021-10-20T22:12:13.962Z",
-        "line": 21,
+        "start_timestamp": "2021-10-21T20:39:03.664Z",
+        "line": 28,
         "name": "Order",
         "description": "",
         "id": "spring-1-goya-project-scenario;order",
@@ -191,10 +262,10 @@
         "steps": [
           {
             "result": {
-              "duration": 7185000000,
+              "duration": 7965000000,
               "status": "passed"
             },
-            "line": 22,
+            "line": 29,
             "name": "user is home page",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.user_is_home_page()"
@@ -203,10 +274,10 @@
           },
           {
             "result": {
-              "duration": 2177000000,
+              "duration": 5525000000,
               "status": "passed"
             },
-            "line": 23,
+            "line": 30,
             "name": "click on Order tab",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_order_tab()"
@@ -215,10 +286,10 @@
           },
           {
             "result": {
-              "duration": 2089000000,
+              "duration": 123000000,
               "status": "passed"
             },
-            "line": 24,
+            "line": 31,
             "name": "order Page verify",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.order_page_verify()"
@@ -227,10 +298,10 @@
           },
           {
             "result": {
-              "duration": 4449000000,
+              "duration": 4284000000,
               "status": "passed"
             },
-            "line": 25,
+            "line": 32,
             "name": "customer dropdown select Customer",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.customer_dropdown_select_customer()"
@@ -239,10 +310,10 @@
           },
           {
             "result": {
-              "duration": 5158000000,
+              "duration": 5179000000,
               "status": "passed"
             },
-            "line": 26,
+            "line": 33,
             "name": "click on Search Item Button",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_search_item_button()"
@@ -251,10 +322,10 @@
           },
           {
             "result": {
-              "duration": 6795000000,
+              "duration": 6727000000,
               "status": "passed"
             },
-            "line": 27,
+            "line": 34,
             "name": "search Items value in the textBox",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.search_items_value_in_the_text_box()"
@@ -263,10 +334,10 @@
           },
           {
             "result": {
-              "duration": 3176000000,
+              "duration": 3228000000,
               "status": "passed"
             },
-            "line": 28,
+            "line": 35,
             "name": "click on Add to Cart Button",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_add_to_cart_button()"
@@ -275,10 +346,10 @@
           },
           {
             "result": {
-              "duration": 7174000000,
+              "duration": 7144000000,
               "status": "passed"
             },
-            "line": 29,
+            "line": 36,
             "name": "enter Quantity",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.enter_quantity()"
@@ -287,10 +358,10 @@
           },
           {
             "result": {
-              "duration": 5176000000,
+              "duration": 5193000000,
               "status": "passed"
             },
-            "line": 30,
+            "line": 37,
             "name": "click on pop_up Add to Cart Button",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_pop_up_add_to_cart_button()"
@@ -299,10 +370,10 @@
           },
           {
             "result": {
-              "duration": 5401000000,
+              "duration": 5345000000,
               "status": "passed"
             },
-            "line": 31,
+            "line": 38,
             "name": "click on continue Button",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_continue_button()"
@@ -311,10 +382,10 @@
           },
           {
             "result": {
-              "duration": 5113000000,
+              "duration": 5133000000,
               "status": "passed"
             },
-            "line": 32,
+            "line": 39,
             "name": "store EOR Data",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.store_eor_data()"
@@ -323,10 +394,10 @@
           },
           {
             "result": {
-              "duration": 7626000000,
+              "duration": 17640000000,
               "status": "passed"
             },
-            "line": 33,
+            "line": 40,
             "name": "click on Submit button",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_submit_button()"
@@ -336,8 +407,8 @@
         ]
       },
       {
-        "start_timestamp": "2021-10-20T22:13:15.519Z",
-        "line": 36,
+        "start_timestamp": "2021-10-21T20:40:17.174Z",
+        "line": 42,
         "name": "Order Status",
         "description": "",
         "id": "spring-1-goya-project-scenario;order-status",
@@ -346,10 +417,10 @@
         "steps": [
           {
             "result": {
-              "duration": 7280000000,
+              "duration": 7923000000,
               "status": "passed"
             },
-            "line": 37,
+            "line": 43,
             "name": "user is home page",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.user_is_home_page()"
@@ -358,10 +429,10 @@
           },
           {
             "result": {
-              "duration": 3206000000,
+              "duration": 5435000000,
               "status": "passed"
             },
-            "line": 38,
+            "line": 44,
             "name": "i click on Order Status tab",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.i_click_on_order_status_tab()"
@@ -370,10 +441,10 @@
           },
           {
             "result": {
-              "duration": 11452000000,
+              "duration": 11427000000,
               "status": "passed"
             },
-            "line": 39,
+            "line": 45,
             "name": "customer Order Status dropdown select Customer",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.customer_order_status_dropdown_select_customer()"
@@ -382,13 +453,168 @@
           },
           {
             "result": {
-              "duration": 10313000000,
+              "duration": 15269000000,
               "status": "passed"
             },
-            "line": 40,
+            "line": 46,
             "name": "Store EOR Data input",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.store_eor_data_input()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-10-21T20:40:57.259Z",
+        "line": 48,
+        "name": "Negative Order Placed Scenario",
+        "description": "",
+        "id": "spring-1-goya-project-scenario;negative-order-placed-scenario",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8054000000,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "user is home page",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.user_is_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4484000000,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "click on Order tab",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_order_tab()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 90000000,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "order Page verify",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.order_page_verify()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4290000000,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "customer dropdown select Customer",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.customer_dropdown_select_customer()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5154000000,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "click on Search Item Button",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_search_item_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6700000000,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "search Items negative value in the textBox",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.search_items_negative_value_in_the_text_box()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3218000000,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "click on Add to Cart Button",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_add_to_cart_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7094000000,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "enter Quantity",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.enter_quantity()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5195000000,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "click on pop_up Add to Cart Button",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_pop_up_add_to_cart_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5358000000,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "click on continue Button",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_continue_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 42232000000,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "negative store EOR Data",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.negative_store_eor_data()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17578000000,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "click on Submit button",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_submit_button()"
             },
             "keyword": "Then "
           }

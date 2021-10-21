@@ -103,6 +103,9 @@ public class dashBoardXpath extends userHomePage {
 
     @FindBy(how = How.XPATH, using = "//input[@name='submitAll']")
     public WebElement Submit;
+    @FindBy(how = How.XPATH, using = "//*[@id='submitonlinemodal']/div[2]/div/div[2]/button[1]")
+    public WebElement pop_up_Submit;
+
     @FindBy(how = How.XPATH, using = "//input[@id='']")
     public WebElement checkbox_click;
 

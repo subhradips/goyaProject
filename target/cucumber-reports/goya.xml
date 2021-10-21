@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="156.682">
-<testcase classname="Spring 1 goya project scenario" name="Login Page" time="26.863">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="308.824">
+<testcase classname="Spring 1 goya project scenario" name="Negative scenario Login Page" time="30.009">
+<system-out><![CDATA[Given I am on the Login page................................................passed
+When I should see Sign In Page..............................................passed
+Then I enter wrong username.................................................passed
+Then I enter wrong password.................................................passed
+Then user clicks on login button............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Spring 1 goya project scenario" name="Login Page" time="13.944">
 <system-out><![CDATA[Given I am on the Login page................................................passed
 When I should see Sign In Page..............................................passed
 Then I enter username.......................................................passed
@@ -8,7 +16,7 @@ Then I enter password.......................................................pass
 Then user clicks on login button............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Spring 1 goya project scenario" name="Customer" time="34.934">
+<testcase classname="Spring 1 goya project scenario" name="Customer" time="41.378">
 <system-out><![CDATA[Given user is home page.....................................................passed
 When i click customers tab..................................................passed
 Then customers Page verify..................................................passed
@@ -19,7 +27,7 @@ Then click on process button................................................pass
 Then you have enter home page verify........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Spring 1 goya project scenario" name="Order" time="61.538">
+<testcase classname="Spring 1 goya project scenario" name="Order" time="73.504">
 <system-out><![CDATA[Given user is home page.....................................................passed
 When click on Order tab.....................................................passed
 Then order Page verify......................................................passed
@@ -34,11 +42,26 @@ Then store EOR Data.........................................................pass
 Then click on Submit button.................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Spring 1 goya project scenario" name="Order Status" time="32.257">
+<testcase classname="Spring 1 goya project scenario" name="Order Status" time="40.061">
 <system-out><![CDATA[Given user is home page.....................................................passed
 When i click on Order Status tab............................................passed
 Then customer Order Status dropdown select Customer.........................passed
 Then Store EOR Data input...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Spring 1 goya project scenario" name="Negative Order Placed Scenario" time="109.46">
+<system-out><![CDATA[Given user is home page.....................................................passed
+When click on Order tab.....................................................passed
+Then order Page verify......................................................passed
+Then customer dropdown select Customer......................................passed
+Then click on Search Item Button............................................passed
+Then search Items negative value in the textBox.............................passed
+Then click on Add to Cart Button............................................passed
+Then enter Quantity.........................................................passed
+Then click on pop_up Add to Cart Button.....................................passed
+Then click on continue Button...............................................passed
+Then negative store EOR Data................................................passed
+Then click on Submit button.................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
