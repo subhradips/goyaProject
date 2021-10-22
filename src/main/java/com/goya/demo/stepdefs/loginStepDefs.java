@@ -148,7 +148,7 @@ public class loginStepDefs extends goyaBase {
 
         assertEquals(value1, value);
         System.out.println("********* Header file change name ************ : " + acctualFinalMessage);
-        Thread.sleep(500);
+        Thread.sleep(2000);
     }
 
 
@@ -233,7 +233,7 @@ public class loginStepDefs extends goyaBase {
     public void negative_store_eor_data()throws Exception {
         String s = ((JavascriptExecutor) driver).executeScript("return document.getElementById('eor').value").toString();
         System.out.println("EOR Invoice Number is: "+s);
-        reader.setCellData("goya", "InvoiceNumber", 2, s);
+        reader.setCellData("goya", "InvoiceNumber", 3, s);
         Thread.sleep(5000);
 
         String Red_background = driver.findElement(By.xpath("//tr[@class='font-size2 ng-scope itemBackground']")).getCssValue("background-color");
@@ -244,7 +244,9 @@ public class loginStepDefs extends goyaBase {
             WebElement color_delete = driver.findElement(By.xpath("//tbody/tr[1]//td[@name='deleteItem']"));
             color_delete.click();
             Thread.sleep(2000);
-            driver.switchTo().alert().accept();
+            Alert action = driver.switchTo().alert();
+            reader.setCellData("goya","Restricted Order place Message",2,action.getText());
+            action.accept();
             Thread.sleep(2000);
             click_on_search_item_button();
             search_items_value_in_the_text_box();
@@ -282,7 +284,7 @@ public class loginStepDefs extends goyaBase {
         }
         else {
             dashBoardXpath.clickOn(dashBoardXpath.Continue_Merge);
-            String EOR = reader.getCellData("goya", "InvoiceNumber", 2);
+            String EOR = reader.getCellData("goya", "InvoiceNumber", 3);
             List<WebElement> dynamicElement = driver.findElements(By.xpath("//body/div[1]/div[4]/div[9]/div[2]/div[1]/div[2]"));
             if (dynamicElement.size() > 0) {
                 System.out.println("Test:=------========== " + EOR + "-----------========= is present ");
@@ -397,7 +399,7 @@ public class loginStepDefs extends goyaBase {
         WebElement EOR_SearchBox = dashBoardXpath.Oder_Status_EOR;
         EOR_SearchBox.click();
         dashBoardXpath.enterValue(EOR_SearchBox,reader.getCellData("goya","InvoiceNumber",2));
-        Thread.sleep(15000);
+        Thread.sleep(20000);
     }
 
 }
