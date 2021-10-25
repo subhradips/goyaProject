@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="336.925">
-<testcase classname="Spring 1 goya project scenario" name="Negative scenario Login Page" time="27.685">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="318.453">
+<testcase classname="Spring 1 goya project scenario" name="Negative scenario Login Page" time="31.452">
 <system-out><![CDATA[Given I am on the Login page................................................passed
 When I should see Sign In Page..............................................passed
 Then I enter wrong username.................................................passed
@@ -8,7 +8,7 @@ Then I enter wrong password.................................................pass
 Then user clicks on login button............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Spring 1 goya project scenario" name="Login Page" time="13.659">
+<testcase classname="Spring 1 goya project scenario" name="Login Page" time="14.57">
 <system-out><![CDATA[Given I am on the Login page................................................passed
 When I should see Sign In Page..............................................passed
 Then I enter username.......................................................passed
@@ -16,7 +16,7 @@ Then I enter password.......................................................pass
 Then user clicks on login button............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Spring 1 goya project scenario" name="Customer" time="44.466">
+<testcase classname="Spring 1 goya project scenario" name="Customer" time="45.258">
 <system-out><![CDATA[Given user is home page.....................................................passed
 When i click customers tab..................................................passed
 Then customers Page verify..................................................passed
@@ -27,7 +27,7 @@ Then click on process button................................................pass
 Then you have enter home page verify........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Spring 1 goya project scenario" name="Order" time="82.222">
+<testcase classname="Spring 1 goya project scenario" name="Order" time="72.416">
 <system-out><![CDATA[Given user is home page.....................................................passed
 When click on Order tab.....................................................passed
 Then order Page verify......................................................passed
@@ -42,14 +42,14 @@ Then store EOR Data.........................................................pass
 Then click on Submit button.................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Spring 1 goya project scenario" name="Order Status" time="54.497">
+<testcase classname="Spring 1 goya project scenario" name="Order Status" time="44.959">
 <system-out><![CDATA[Given user is home page.....................................................passed
 When i click on Order Status tab............................................passed
 Then customer Order Status dropdown select Customer.........................passed
 Then Store EOR Data input...................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Spring 1 goya project scenario" name="Negative Order Placed Scenario" time="113.82">
+<testcase classname="Spring 1 goya project scenario" name="Negative Order Placed Scenario" time="109.375">
 <system-out><![CDATA[Given user is home page.....................................................passed
 When click on Order tab.....................................................passed
 Then order Page verify......................................................passed

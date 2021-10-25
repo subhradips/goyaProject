@@ -255,8 +255,6 @@ public class loginStepDefs extends goyaBase {
             click_on_pop_up_add_to_cart_button();
             click_on_continue_button();
 
-
-
         }
     }
 
