@@ -75,9 +75,7 @@ public class loginStepDefs extends goyaBase {
     public void user_clicks_on_login_button()throws Exception {
         driverStorage_xpath.clickOn(driverStorage_xpath.submitButton);
         Thread.sleep(2000);
-        String expect = driverStorage_xpath.submitButton.getText();
-        String accual = driver.getTitle();
-        assertEquals(expect,accual);
+        assertEquals("GOYA Food",driver.getTitle());
         System.out.println("Dahboard page is:  "+driver.getTitle());
         Thread.sleep(3000);
         driver.navigate().refresh();
