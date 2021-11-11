@@ -1,3 +1,4 @@
+@Goya_Login
 Feature: Spring 1 goya project scenario
 
   Scenario: Negative scenario Login Page
@@ -5,7 +6,7 @@ Feature: Spring 1 goya project scenario
     When  I should see Sign In Page
     Then  I enter wrong username
     Then  I enter wrong password
-    Then  user clicks on login button
+    Then  user clicks on Negative_login button
 
   Scenario: Login Page
     Given I am on the Login page

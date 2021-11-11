@@ -96,6 +96,8 @@ public class dashBoardXpath extends userHomePage {
 
     @FindBy (how = How.XPATH,using = "//tbody/tr[1]/td[12]/a[1]")
     public WebElement Order_Status_edit;
+    @FindBy(how =How.XPATH,using = "//div[@class='validUser ng-scope']")
+    public WebElement Wrong_message;
 
 
     @FindBy(how = How.XPATH, using = "//a[contains(text(),'Continue')]")

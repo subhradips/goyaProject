@@ -11,12 +11,16 @@ public class goyaBase {
 
     static {
         //System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/driver/geckodriver.exe");
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/driver/chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/driver/chromedriver.exe");
+//
+//        ChromeOptions chromeOptions = new ChromeOptions();
+//        chromeOptions.setBinary("C:/Program Files/Google/Chrome/Application/chrome.exe");
+//
+//        driver = new ChromeDriver(chromeOptions);
+//        driver.manage().window().maximize();
 
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.setBinary("C:/Program Files/Google/Chrome/Application/chrome.exe");
-
-        driver = new ChromeDriver(chromeOptions);
+        System.setProperty("webdriver.chrome.driver","driver/chromedriver2.exe");
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 }

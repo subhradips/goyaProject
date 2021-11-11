@@ -1,10 +1,10 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-10-25T20:53:16.136Z",
-        "line": 3,
+        "start_timestamp": "2021-11-11T20:39:34.431Z",
+        "line": 4,
         "name": "Negative scenario Login Page",
         "description": "",
         "id": "spring-1-goya-project-scenario;negative-scenario-login-page",
@@ -13,10 +13,87 @@
         "steps": [
           {
             "result": {
-              "duration": 18963000000,
+              "duration": 13760000000,
               "status": "passed"
             },
-            "line": 4,
+            "line": 5,
+            "name": "I am on the Login page",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.i_am_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1030000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I should see Sign In Page",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.i_should_see_sign_in_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6366000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I enter wrong username",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.i_enter_wrong_username()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2152000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I enter wrong password",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.i_enter_wrong_password()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c[Login]\u003e but was:\u003c[GOYA Food]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat com.goya.demo.stepdefs.loginStepDefs.user_clicks_on_negative_login_button(loginStepDefs.java:420)\r\n\tat ✽.user clicks on Negative_login button(file:///D:/goyaProject/./src/test/resources/features/login.feature:9)\r\n",
+              "duration": 2173000000,
+              "status": "failed"
+            },
+            "line": 9,
+            "name": "user clicks on Negative_login button",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.user_clicks_on_negative_login_button()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Goya_Login"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-11-11T20:40:00.045Z",
+        "line": 11,
+        "name": "Login Page",
+        "description": "",
+        "id": "spring-1-goya-project-scenario;login-page",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1881000000,
+              "status": "passed"
+            },
+            "line": 12,
             "name": "I am on the Login page",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.i_am_on_the_login_page()"
@@ -28,90 +105,19 @@
               "duration": 1024000000,
               "status": "passed"
             },
-            "line": 5,
-            "name": "I should see Sign In Page",
-            "match": {
-              "location": "com.goya.demo.stepdefs.loginStepDefs.i_should_see_sign_in_page()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 6963000000,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "I enter wrong username",
-            "match": {
-              "location": "com.goya.demo.stepdefs.loginStepDefs.i_enter_wrong_username()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2176000000,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "I enter wrong password",
-            "match": {
-              "location": "com.goya.demo.stepdefs.loginStepDefs.i_enter_wrong_password()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2137000000,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "user clicks on login button",
-            "match": {
-              "location": "com.goya.demo.stepdefs.loginStepDefs.user_clicks_on_login_button()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-10-25T20:53:47.628Z",
-        "line": 10,
-        "name": "Login Page",
-        "description": "",
-        "id": "spring-1-goya-project-scenario;login-page",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1792000000,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "I am on the Login page",
-            "match": {
-              "location": "com.goya.demo.stepdefs.loginStepDefs.i_am_on_the_login_page()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1048000000,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "I should see Sign In Page",
-            "match": {
-              "location": "com.goya.demo.stepdefs.loginStepDefs.i_should_see_sign_in_page()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 7460000000,
-              "status": "passed"
-            },
             "line": 13,
+            "name": "I should see Sign In Page",
+            "match": {
+              "location": "com.goya.demo.stepdefs.loginStepDefs.i_should_see_sign_in_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6995000000,
+              "status": "passed"
+            },
+            "line": 14,
             "name": "I enter username",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.i_enter_username()"
@@ -120,10 +126,10 @@
           },
           {
             "result": {
-              "duration": 2142000000,
+              "duration": 2109000000,
               "status": "passed"
             },
-            "line": 14,
+            "line": 15,
             "name": "I enter password",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.i_enter_password()"
@@ -132,21 +138,27 @@
           },
           {
             "result": {
-              "duration": 2116000000,
-              "status": "passed"
+              "error_message": "org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.\nBuild info: version: \u00274.0.0-alpha-6\u0027, revision: \u00275f43a29cfc\u0027\nSystem info: host: \u0027SB3TS-02\u0027, ip: \u0027192.168.255.26\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_301\u0027\nDriver info: driver.version: RemoteWebDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.69, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\\Users\\SUBHRA~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:65265}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: f9baf047629ee9f7d178e83cc5933200\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:603)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:394)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)\r\n\tat com.sun.proxy.$Proxy19.getText(Unknown Source)\r\n\tat com.goya.demo.stepdefs.loginStepDefs.user_clicks_on_login_button(loginStepDefs.java:78)\r\n\tat ✽.user clicks on login button(file:///D:/goyaProject/./src/test/resources/features/login.feature:16)\r\nCaused by: java.lang.RuntimeException: NettyHttpHandler request execution error\r\n\tat org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:72)\r\n\tat org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)\r\n\tat org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)\r\n\tat org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:47)\r\n\tat org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)\r\n\tat org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)\r\n\tat org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:55)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:157)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:394)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)\r\n\tat com.sun.proxy.$Proxy19.getText(Unknown Source)\r\n\tat com.goya.demo.stepdefs.loginStepDefs.user_clicks_on_login_button(loginStepDefs.java:78)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\r\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\r\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\r\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)\r\n\tat io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)\r\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\r\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\r\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:63)\r\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:49)\r\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:99)\r\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:71)\r\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:199)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:234)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\r\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\r\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\r\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)\r\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)\r\nCaused by: java.util.concurrent.ExecutionException: java.util.concurrent.TimeoutException: Request timeout to localhost/127.0.0.1:35202 after 60000 ms\r\n\tat java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:357)\r\n\tat java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1908)\r\n\tat org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:201)\r\n\tat org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:57)\r\n\t... 55 more\r\nCaused by: java.util.concurrent.TimeoutException: Request timeout to localhost/127.0.0.1:35202 after 60000 ms\r\n\tat org.asynchttpclient.netty.timeout.TimeoutTimerTask.expire(TimeoutTimerTask.java:43)\r\n\tat org.asynchttpclient.netty.timeout.RequestTimeoutTimerTask.run(RequestTimeoutTimerTask.java:50)\r\n\tat io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:672)\r\n\tat io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:747)\r\n\tat io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:472)\r\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\r\n\tat java.lang.Thread.run(Thread.java:748)\r\n",
+              "duration": 62115000000,
+              "status": "failed"
             },
-            "line": 15,
+            "line": 16,
             "name": "user clicks on login button",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.user_clicks_on_login_button()"
             },
             "keyword": "Then "
           }
+        ],
+        "tags": [
+          {
+            "name": "@Goya_Login"
+          }
         ]
       },
       {
-        "start_timestamp": "2021-10-25T20:54:02.217Z",
-        "line": 17,
+        "start_timestamp": "2021-11-11T20:41:14.201Z",
+        "line": 18,
         "name": "Customer",
         "description": "",
         "id": "spring-1-goya-project-scenario;customer",
@@ -155,10 +167,10 @@
         "steps": [
           {
             "result": {
-              "duration": 8038000000,
+              "duration": 8890000000,
               "status": "passed"
             },
-            "line": 18,
+            "line": 19,
             "name": "user is home page",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.user_is_home_page()"
@@ -167,10 +179,10 @@
           },
           {
             "result": {
-              "duration": 6315000000,
+              "duration": 6112000000,
               "status": "passed"
             },
-            "line": 19,
+            "line": 20,
             "name": "i click customers tab",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.i_click_customers_tab()"
@@ -179,10 +191,10 @@
           },
           {
             "result": {
-              "duration": 2091000000,
+              "duration": 2049000000,
               "status": "passed"
             },
-            "line": 20,
+            "line": 21,
             "name": "customers Page verify",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.customers_page_verify()"
@@ -191,10 +203,10 @@
           },
           {
             "result": {
-              "duration": 2590000000,
+              "duration": 2296000000,
               "status": "passed"
             },
-            "line": 21,
+            "line": 22,
             "name": "given input search customer textbox",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.given_input_search_customer_textbox()"
@@ -203,10 +215,10 @@
           },
           {
             "result": {
-              "duration": 4179000000,
+              "duration": 4111000000,
               "status": "passed"
             },
-            "line": 22,
+            "line": 23,
             "name": "choose customer",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.choose_customer()"
@@ -215,10 +227,10 @@
           },
           {
             "result": {
-              "duration": 6148000000,
+              "duration": 6122000000,
               "status": "passed"
             },
-            "line": 23,
+            "line": 24,
             "name": "click on select button",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_select_button()"
@@ -227,10 +239,10 @@
           },
           {
             "result": {
-              "duration": 13783000000,
+              "duration": 13266000000,
               "status": "passed"
             },
-            "line": 24,
+            "line": 25,
             "name": "click on process button",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_process_button()"
@@ -239,21 +251,26 @@
           },
           {
             "result": {
-              "duration": 2090000000,
+              "duration": 2082000000,
               "status": "passed"
             },
-            "line": 25,
+            "line": 26,
             "name": "you have enter home page verify",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.you_have_enter_home_page_verify()"
             },
             "keyword": "Then "
           }
+        ],
+        "tags": [
+          {
+            "name": "@Goya_Login"
+          }
         ]
       },
       {
-        "start_timestamp": "2021-10-25T20:54:47.493Z",
-        "line": 28,
+        "start_timestamp": "2021-11-11T20:41:59.160Z",
+        "line": 29,
         "name": "Order",
         "description": "",
         "id": "spring-1-goya-project-scenario;order",
@@ -262,10 +279,10 @@
         "steps": [
           {
             "result": {
-              "duration": 7287000000,
+              "duration": 7980000000,
               "status": "passed"
             },
-            "line": 29,
+            "line": 30,
             "name": "user is home page",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.user_is_home_page()"
@@ -274,10 +291,10 @@
           },
           {
             "result": {
-              "duration": 5231000000,
+              "duration": 4128000000,
               "status": "passed"
             },
-            "line": 30,
+            "line": 31,
             "name": "click on Order tab",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_order_tab()"
@@ -286,10 +303,10 @@
           },
           {
             "result": {
-              "duration": 58000000,
+              "duration": 64000000,
               "status": "passed"
             },
-            "line": 31,
+            "line": 32,
             "name": "order Page verify",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.order_page_verify()"
@@ -298,10 +315,10 @@
           },
           {
             "result": {
-              "duration": 4371000000,
+              "duration": 4354000000,
               "status": "passed"
             },
-            "line": 32,
+            "line": 33,
             "name": "customer dropdown select Customer",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.customer_dropdown_select_customer()"
@@ -310,10 +327,10 @@
           },
           {
             "result": {
-              "duration": 5231000000,
+              "duration": 5186000000,
               "status": "passed"
             },
-            "line": 33,
+            "line": 34,
             "name": "click on Search Item Button",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_search_item_button()"
@@ -322,10 +339,10 @@
           },
           {
             "result": {
-              "duration": 6609000000,
+              "duration": 6624000000,
               "status": "passed"
             },
-            "line": 34,
+            "line": 35,
             "name": "search Items value in the textBox",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.search_items_value_in_the_text_box()"
@@ -334,10 +351,10 @@
           },
           {
             "result": {
-              "duration": 3199000000,
+              "duration": 3163000000,
               "status": "passed"
             },
-            "line": 35,
+            "line": 36,
             "name": "click on Add to Cart Button",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_add_to_cart_button()"
@@ -346,10 +363,10 @@
           },
           {
             "result": {
-              "duration": 7157000000,
+              "duration": 7094000000,
               "status": "passed"
             },
-            "line": 36,
+            "line": 37,
             "name": "enter Quantity",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.enter_quantity()"
@@ -358,10 +375,10 @@
           },
           {
             "result": {
-              "duration": 5167000000,
+              "duration": 5181000000,
               "status": "passed"
             },
-            "line": 37,
+            "line": 38,
             "name": "click on pop_up Add to Cart Button",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_pop_up_add_to_cart_button()"
@@ -370,10 +387,10 @@
           },
           {
             "result": {
-              "duration": 5326000000,
+              "duration": 5321000000,
               "status": "passed"
             },
-            "line": 38,
+            "line": 39,
             "name": "click on continue Button",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_continue_button()"
@@ -382,10 +399,10 @@
           },
           {
             "result": {
-              "duration": 5122000000,
+              "duration": 5114000000,
               "status": "passed"
             },
-            "line": 39,
+            "line": 40,
             "name": "store EOR Data",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.store_eor_data()"
@@ -394,21 +411,26 @@
           },
           {
             "result": {
-              "duration": 17645000000,
+              "duration": 17525000000,
               "status": "passed"
             },
-            "line": 40,
+            "line": 41,
             "name": "click on Submit button",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_submit_button()"
             },
             "keyword": "Then "
           }
+        ],
+        "tags": [
+          {
+            "name": "@Goya_Login"
+          }
         ]
       },
       {
-        "start_timestamp": "2021-10-25T20:55:59.933Z",
-        "line": 42,
+        "start_timestamp": "2021-11-11T20:43:10.926Z",
+        "line": 43,
         "name": "Order Status",
         "description": "",
         "id": "spring-1-goya-project-scenario;order-status",
@@ -417,10 +439,10 @@
         "steps": [
           {
             "result": {
-              "duration": 7992000000,
+              "duration": 7974000000,
               "status": "passed"
             },
-            "line": 43,
+            "line": 44,
             "name": "user is home page",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.user_is_home_page()"
@@ -429,10 +451,10 @@
           },
           {
             "result": {
-              "duration": 5292000000,
+              "duration": 5125000000,
               "status": "passed"
             },
-            "line": 44,
+            "line": 45,
             "name": "i click on Order Status tab",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.i_click_on_order_status_tab()"
@@ -441,10 +463,10 @@
           },
           {
             "result": {
-              "duration": 11365000000,
+              "duration": 11449000000,
               "status": "passed"
             },
-            "line": 45,
+            "line": 46,
             "name": "customer Order Status dropdown select Customer",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.customer_order_status_dropdown_select_customer()"
@@ -453,21 +475,26 @@
           },
           {
             "result": {
-              "duration": 20296000000,
+              "duration": 20248000000,
               "status": "passed"
             },
-            "line": 46,
+            "line": 47,
             "name": "Store EOR Data input",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.store_eor_data_input()"
             },
             "keyword": "Then "
           }
+        ],
+        "tags": [
+          {
+            "name": "@Goya_Login"
+          }
         ]
       },
       {
-        "start_timestamp": "2021-10-25T20:56:44.921Z",
-        "line": 48,
+        "start_timestamp": "2021-11-11T20:43:55.738Z",
+        "line": 49,
         "name": "Negative Order Placed Scenario",
         "description": "",
         "id": "spring-1-goya-project-scenario;negative-order-placed-scenario",
@@ -476,10 +503,10 @@
         "steps": [
           {
             "result": {
-              "duration": 8356000000,
+              "duration": 8196000000,
               "status": "passed"
             },
-            "line": 49,
+            "line": 50,
             "name": "user is home page",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.user_is_home_page()"
@@ -488,10 +515,10 @@
           },
           {
             "result": {
-              "duration": 4195000000,
+              "duration": 4222000000,
               "status": "passed"
             },
-            "line": 50,
+            "line": 51,
             "name": "click on Order tab",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_order_tab()"
@@ -500,10 +527,10 @@
           },
           {
             "result": {
-              "duration": 92000000,
+              "duration": 31000000,
               "status": "passed"
             },
-            "line": 51,
+            "line": 52,
             "name": "order Page verify",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.order_page_verify()"
@@ -512,10 +539,10 @@
           },
           {
             "result": {
-              "duration": 4251000000,
+              "duration": 4304000000,
               "status": "passed"
             },
-            "line": 52,
+            "line": 53,
             "name": "customer dropdown select Customer",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.customer_dropdown_select_customer()"
@@ -524,10 +551,10 @@
           },
           {
             "result": {
-              "duration": 5192000000,
+              "duration": 5125000000,
               "status": "passed"
             },
-            "line": 53,
+            "line": 54,
             "name": "click on Search Item Button",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_search_item_button()"
@@ -536,10 +563,10 @@
           },
           {
             "result": {
-              "duration": 6656000000,
+              "duration": 6584000000,
               "status": "passed"
             },
-            "line": 54,
+            "line": 55,
             "name": "search Items negative value in the textBox",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.search_items_negative_value_in_the_text_box()"
@@ -548,10 +575,10 @@
           },
           {
             "result": {
-              "duration": 3219000000,
+              "duration": 3150000000,
               "status": "passed"
             },
-            "line": 55,
+            "line": 56,
             "name": "click on Add to Cart Button",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_add_to_cart_button()"
@@ -560,10 +587,10 @@
           },
           {
             "result": {
-              "duration": 7126000000,
+              "duration": 7124000000,
               "status": "passed"
             },
-            "line": 56,
+            "line": 57,
             "name": "enter Quantity",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.enter_quantity()"
@@ -572,10 +599,10 @@
           },
           {
             "result": {
-              "duration": 5189000000,
+              "duration": 5159000000,
               "status": "passed"
             },
-            "line": 57,
+            "line": 58,
             "name": "click on pop_up Add to Cart Button",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_pop_up_add_to_cart_button()"
@@ -584,10 +611,10 @@
           },
           {
             "result": {
-              "duration": 5414000000,
+              "duration": 5295000000,
               "status": "passed"
             },
-            "line": 58,
+            "line": 59,
             "name": "click on continue Button",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_continue_button()"
@@ -596,10 +623,10 @@
           },
           {
             "result": {
-              "duration": 42031000000,
+              "duration": 41849000000,
               "status": "passed"
             },
-            "line": 59,
+            "line": 60,
             "name": "negative store EOR Data",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.negative_store_eor_data()"
@@ -608,15 +635,21 @@
           },
           {
             "result": {
-              "duration": 17636000000,
-              "status": "passed"
+              "error_message": "org.openqa.selenium.NoAlertPresentException: no such alert\n  (Session info: chrome\u003d95.0.4638.69)\nBuild info: version: \u00274.0.0-alpha-6\u0027, revision: \u00275f43a29cfc\u0027\nSystem info: host: \u0027SB3TS-02\u0027, ip: \u0027192.168.255.26\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_301\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.69, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\\Users\\SUBHRA~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:65265}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: f9baf047629ee9f7d178e83cc5933200\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:639)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:643)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1032)\r\n\tat com.goya.demo.stepdefs.loginStepDefs.click_on_submit_button(loginStepDefs.java:284)\r\n\tat ✽.click on Submit button(file:///D:/goyaProject/./src/test/resources/features/login.feature:61)\r\n",
+              "duration": 11400000000,
+              "status": "failed"
             },
-            "line": 60,
+            "line": 61,
             "name": "click on Submit button",
             "match": {
               "location": "com.goya.demo.stepdefs.loginStepDefs.click_on_submit_button()"
             },
             "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Goya_Login"
           }
         ]
       }
@@ -626,6 +659,15 @@
     "id": "spring-1-goya-project-scenario",
     "keyword": "Feature",
     "uri": "file:src/test/resources/features/login.feature",
-    "tags": []
+    "tags": [
+      {
+        "name": "@Goya_Login",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]

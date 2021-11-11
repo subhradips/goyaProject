@@ -8,12 +8,14 @@ import com.goya.demo.pageObject.xls_Reader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.apache.http.util.Asserts;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.Color;
 
+import java.net.URL;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -23,13 +25,14 @@ import static org.junit.Assert.assertEquals;
 
 public class loginStepDefs extends goyaBase {
     com.goya.demo.pageObject.dashBoardXpath dashBoardXpath = new dashBoardXpath(driver);
-    xls_Reader reader = new xls_Reader("D:\\goyaProject\\src\\test\\resources\\Data.xlsx");
+    xls_Reader reader = new xls_Reader("src/test/resources/Data.xlsx");
     driverStorage driverStorage_xpath = new driverStorage(driver);
     String CustomerInvoiceMessage = new String();
 
     @Given("I am on the Login page")
     public void i_am_on_the_login_page()throws Exception {
         driver.get(prop.getPropValues(goyaConstants.URL));
+        System.out.println("URL given: "+ goyaConstants.URL);
         //waitHelper = new WaitHelper(driver);
         Thread.sleep(1000);
         }
@@ -72,6 +75,12 @@ public class loginStepDefs extends goyaBase {
     public void user_clicks_on_login_button()throws Exception {
         driverStorage_xpath.clickOn(driverStorage_xpath.submitButton);
         Thread.sleep(2000);
+        String expect = driverStorage_xpath.submitButton.getText();
+        String accual = driver.getTitle();
+        assertEquals(expect,accual);
+        System.out.println("Dahboard page is:  "+driver.getTitle());
+        Thread.sleep(3000);
+        driver.navigate().refresh();
     }
 
     @Given("user is home page")
@@ -398,6 +407,28 @@ public class loginStepDefs extends goyaBase {
         EOR_SearchBox.click();
         dashBoardXpath.enterValue(EOR_SearchBox,reader.getCellData("goya","InvoiceNumber",2));
         Thread.sleep(20000);
+    }
+
+    @Then("user clicks on Negative_login button")
+    public void user_clicks_on_negative_login_button()throws Exception {
+
+        driverStorage_xpath.clickOn(driverStorage_xpath.submitButton);
+        Thread.sleep(2000);
+
+        String expect = driverStorage_xpath.submitButton.getText();
+        String accual = driver.getTitle();
+        assertEquals(expect,accual);
+        WebElement message = dashBoardXpath.Wrong_message;
+        if(message.isDisplayed())
+        {
+            String message1 = message.getText();
+            reader.setCellData("goya","Wrong message",2,message1);
+        }else {
+
+            System.out.println("Dahboard page is:  "+driver.getTitle());
+            Thread.sleep(3000);}
+        driver.navigate().refresh();
+
     }
 
 }
